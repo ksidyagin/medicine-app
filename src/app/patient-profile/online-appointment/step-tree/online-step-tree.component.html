@@ -1,0 +1,62 @@
+<div class="account">
+  <div class="account__wrapper">
+    <h2 class="profile-title">Анкетирование</h2>
+
+    <div class="questioning__wrapper">
+
+      <div class="questioning__inner">
+        <h3 class="questioning__title">Есть ли у Вас сопутствующие заболевания?</h3>
+
+        <ul class="questioning__list" >
+          <div *ngFor="let item of anket; let i = index" style="padding-top: 5px">
+            <li class="question__list-item">
+              <div class="questioning__list-que">
+                <p class="questioning__list-number">{{i+1}}</p>
+                <p class="questioning__list-text">{{item.name}}</p>
+              </div>
+              <div class="questioning__list-answers">
+                <div class="questioning__list-answer">
+                  <p class="questioning__list-answer-text">Да</p>
+                  <input class="questioning__list-input" type="radio" name="{{item.id}}" (click)="answer(item,true)">
+                </div>
+                <div class="questioning__list-answer">
+                  <p class="questioning__list-answer-text">Нет</p>
+                  <input class="questioning__list-input" type="radio" name="{{item.id}}" (click)="answer(item,false)">
+                </div>
+              </div>
+            </li>
+            <div *ngFor="let dop of item.dop_q; let j = index">
+              <div *ngIf="dop.condition==item.answer">
+              <li class="question__list-item">
+                <div class="questioning__list-que">
+                  <p class="questioning__list-number">{{i+1}}.{{j+1}}</p>
+                  <p class="questioning__list-text">{{dop.name}}</p>
+                </div>
+                <div class="questioning__list-answers">
+                  <div class="questioning__list-answer">
+                    <p class="questioning__list-answer-text">Да</p>
+                    <input class="questioning__list-input" type="radio" name="{{dop.id}}" (click)="answer(dop,true)">
+                  </div>
+                  <div class="questioning__list-answer">
+                    <p class="questioning__list-answer-text">Нет</p>
+                    <input class="questioning__list-input" type="radio" name="{{dop.id}}" (click)="answer(dop,false)">
+                  </div>
+                </div>
+              </li>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </ul>
+        <button class="questioning__link" (click)="check()">Далее</button>
+
+      </div>
+
+<!--<div *ngIf="check_btn===true">
+  <a class="questioning__link" *ngIf="specialized__question===false" [routerLink]="['', 'online-appointment-patient','online-step-result']" routerLinkActive="active">Далее</a>
+</div>-->
+      <!--<a class="questioning__link" *ngIf="specialized__question_five===true" [routerLink]="['', 'online-appointment-patient','gastritis']" routerLinkActive="active">Далее</a>-->
+    </div>
+
+  </div>
+</div>

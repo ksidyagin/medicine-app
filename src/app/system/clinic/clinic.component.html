@@ -1,0 +1,65 @@
+<div class="main__info">
+    <div class="container">
+        <div class="clinic">
+            <div class="clinic__menu">
+
+                <div class="clinic__menu-item">
+                    <a id="1" class="clinic__menu-link clinic__menu-link-active" (click)="goToClinic('polyclinic', 1)">Поликлиника</a>
+                </div>
+
+                <div class="clinic__menu-item">
+                    <a id="2" class="clinic__menu-link" (click)="goToClinic('about-institution', 2)">Об учереждении</a>
+                </div>
+
+                <div class="clinic__menu-item">
+                    <a id="3" class="clinic__menu-link" (click)="goToClinic('operating-mode', 3)">Режим работы</a>
+                </div>
+
+                <div class="clinic__menu-item">
+                    <a id="4" class="clinic__menu-link" (click)="goToClinic('clinic-staff', 4)">Сотрудники поликлиники</a>
+                </div>
+
+                <div class="clinic__menu-item">
+                    <a id="5" class="clinic__menu-link" (click)="goToClinic('service-list', 5)">Перечень услуг</a>
+                </div>
+
+                <div class="clinic__menu-item">
+                    <a id="6" class="clinic__menu-link" (click)="goToClinic('medical-certificates', 6)">Медицинские справки и осмотры</a>
+                </div>
+
+                <div class="clinic__menu-item">
+                    <a id="7" class="clinic__menu-link" (click)="goToClinic('', 7)">Отделение реабилитации</a>
+                </div>
+
+                <div class="clinic__menu-item">
+                    <a id="8" class="clinic__menu-link" (click)="goToClinic('', 8)">Диспансеризация за 1 день</a>
+                </div>
+
+                <div class="clinic__menu-item">
+                    <a id="9" class="clinic__menu-link" (click)="goToClinic('', 9)">Вакансии</a>
+                </div>
+
+                <div class="clinic__menu-item">
+                    <a id="10" class="clinic__menu-link" (click)="goToClinic('', 10)">Рекомендациии</a>
+                </div>
+
+                <div class="clinic__menu-item">
+                    <a id="11" class="clinic__menu-link" (click)="goToClinic('reviews', 11)">Отзывы</a>
+                </div>
+
+                <div class="clinic__menu-item">
+                    <a id="12" class="clinic__menu-link" (click)="goToClinic('', 12)">Для волонтерских организаций</a>
+                </div>
+
+                <div class="clinic__menu-item">
+                    <a id="13" class="clinic__menu-link" (click)="goToClinic('', 13)">Бережливая поликлиника</a>
+                </div>
+
+                <div class="clinic__menu-item">
+                    <a id="14" class="clinic__menu-link" (click)="goToClinic('', 14)">Приглашаем к сотрудничеству организации</a>
+                </div>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

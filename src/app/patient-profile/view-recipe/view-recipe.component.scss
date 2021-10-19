@@ -1,0 +1,53 @@
+.main__title {
+    width: 500px;
+    height: 54px;
+    background: #9fe5e9;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 3px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    color: #696d94 !important;
+}
+
+.information_recipe{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #E3F6F7;
+    border-radius: 10px;
+    padding: 10px;
+    width: 1300px;
+    font-family: Noto Sans !important;
+}
+.information_recipe h3{
+    padding: 40px 40px;
+}
+
+.information_recipe p {
+    margin-top: 10px 0;
+}
+
+.information_recipe a{
+    font-family: Noto Sans;
+    text-decoration-line: underline;
+}
+.information_recipe .title{
+    margin-right: 15px;
+}
+
+.information_recipe .body {
+    display: flex;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.QR-code{
+    margin-left: 40%;
+    margin-bottom: 25px;
+}
+
+.information_recipe button{
+    margin-left: 40%;
+    border: none;
+}

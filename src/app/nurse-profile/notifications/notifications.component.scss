@@ -1,0 +1,155 @@
+.main__title {
+    width: 272px;
+    height: 53px;
+    background: #9FE5E9;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 3px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    color: #696D94 !important;
+}
+
+.notifications{
+    width: 1026px;
+    height: 241px;
+    background: #FFFFFF;
+    border: 1px solid #1D8187;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 30px 26px 31px 42px;
+}
+.notifications__filters{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.notifications__filter{
+    width: 316px;
+    height: 39px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #3CB3BB;
+    border-radius: 10px;
+}
+.white__circle{
+    width: 11px;
+    height: 11px;
+    display: inline-block;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+
+.p-inputtext {
+    margin-bottom: .5rem;
+    height: 39px;
+    width: 500px;
+    background-color: #199096;
+    border-radius: 10px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 1; /* Firefox */
+  }
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: rgb(255, 255, 255);
+  }
+
+
+
+
+.notification { 
+	width:942px;
+	height:114px;
+	position:absolute;
+}
+.notification__block { 
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:rgba(163.00000548362732, 219.0000021457672, 223.00000190734863, 1);
+	width:942px;
+	height:113px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-radius:10px;
+}
+.notification__descr { 
+	color:rgba(0, 0, 0, 1);
+	width:804px;
+	height:49px;
+	position:absolute;
+	left:18px;
+	top:53px;
+	text-align:left;
+	font-size:18px;
+	letter-spacing:0;
+}
+.notification__date { 
+	width:81px;
+	height:27px;
+	position:absolute;
+	left:842px;
+	top:5px;
+}
+.date__block { 
+	background-color:rgba(255, 255, 255, 1);
+	width:81px;
+	height:27px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-radius:10px;
+}
+.date__descr { 
+	color:rgba(29.000000171363354, 129.00000751018524, 135.00000715255737, 1);
+	width:71px;
+	height:17px;
+	position:absolute;
+	left:5px;
+	top:3px;
+	text-align:left;
+	font-size:18px;
+	letter-spacing:0;
+}
+.right__block { 
+	background-color:rgba(19.0000007674098, 117.00000062584877, 122.00000032782555, 1);
+	width:13px;
+	height:114px;
+	position:absolute;
+	left:929px;
+	top:0px;
+	border-radius:10px;
+}
+.patient__code-block { 
+	background-color:rgba(215.0000023841858, 239.00000095367432, 241.00000083446503, 1);
+	width:213px;
+	height:33px;
+	position:absolute;
+	left:0px;
+	top:0px;
+    border-top-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+.patient__code-id { 
+	color:rgba(0, 0, 0, 1);
+	position:absolute;
+	left:12px;
+	top:6px;
+	text-align:left;
+    font-weight: bold;
+	font-size:18px;
+	letter-spacing:0;
+}

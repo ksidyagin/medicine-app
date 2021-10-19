@@ -1,0 +1,27 @@
+<h2 class="main__title">Просмотр рецепта</h2>
+
+<div class class="information_recipe">
+    <h3>Информация:</h3>
+    <div class="body">
+        <div class="title">
+            <p>Номер рецепта:</p>
+            <p>Услуга:</p>
+            <p>Поликлиника:</p>
+            <p>Врач:</p>
+            <p>Дата выписки рецепта:</p>
+            <p>Статус:</p>
+        </div>
+        <div class="value">
+            <p>{{recipe.number}}</p>
+            <p>{{recipe.service}}</p>
+            <p>{{recipe.polyclinic}}</p>
+            <p><a>{{recipe.doctor}}</a></p>
+            <p>{{recipe.date}}</p>
+            <p>{{recipe.status}}</p>
+        </div>
+    </div>
+
+    <img class="QR-code" src="../../../assets/pics/view-record-qr.png">
+    <button><img src="../../../assets/pics/save_QR-code.png"></button>
+
+</div>

@@ -1,0 +1,192 @@
+* {
+    font-family: Noto Sans;
+}
+
+.profile-title {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    color: #696D94;
+    width: 500px;
+    height: 49px;
+    background: #9FE5E9;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 40px;
+}
+
+// 
+.worksheet__wrapper {
+    width: 900px;
+    background: #E3F6F7;
+    border-radius: 10px;
+    padding: 35px 52px;
+    margin-bottom: 28px;
+    & hr {
+        width: 100%;
+        height: 0px;
+        border: 1px solid #383636;
+        margin-bottom: 14px;
+    }
+}
+
+.worksheet__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #383636;
+    margin-bottom: 14px;
+}
+
+// 
+.worksheet__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.worksheet__item-title {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #383636;
+    margin-right: 70px;
+    width: 160px;
+}
+
+.worksheet__item-value {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #383636;
+}
+
+.worksheet__item-link {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    text-decoration-line: underline;
+    color: #13757A !important;
+}
+
+.worksheet__item-status-blue {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #29E3EF, #29E3EF), #FF0303;
+    border: 1px solid #000000;
+    margin-right: 9px;
+    display: inline-block;
+}
+
+.worksheet__links {
+    margin-top: 31px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    & hr {
+        height: 0px;
+        width: 100%;
+        border: 1px solid #383636;
+        filter: blur(2px);
+        margin-top: 17px;
+        margin-bottom: 31px;
+    }
+}
+
+.worksheet__links-link {
+    width: 250px;
+    text-align: center;
+    padding: 6px;
+    background: #FFFFFF;
+    border: 2px solid #3CB5BB;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #3CB5BB !important;
+    transition: all .5s;
+    &:hover {
+        background: #3CB5BB;
+        color: #FFFFFF !important;
+    }
+}
+
+.worksheet__link-agreement {
+    width: 434px;
+    background: #FFFFFF;
+    border: 2px solid #3CB5BB;
+    border-radius: 10px;
+    padding: 7px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    transition: all .5s;
+    color: #383636 !important;
+    &:hover {
+        background: #3CB5BB;
+        color: #FFFFFF !important;
+    }
+}
+
+.worksheet__link-agreement-img {
+    width: 27px;
+    height: 27px;
+    margin-right: 7px;
+}
+
+.worksheet__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #817B7B;
+    margin-bottom: 50px;
+}
+
+.worksheet__comment-input {
+    width: 100%;
+    min-height: 53px;
+    background: #FFFFFF;
+    border: 2px solid #3CB5BB;
+    border-radius: 15px;
+    padding: 9px 24px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #383636 !important;
+    margin-bottom: 17px;
+    &::placeholder {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 33px;
+        color: #383636 !important;
+    }
+}
+
+.worksheet__comment-btn {
+    width: 177px;
+    background: #FFFFFF;
+    border: 2px solid #3CB5BB;
+    border-radius: 15px;
+    text-align: center;
+    padding: 6px 15px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #3CB5BB !important;
+}
+.question__table-status-red {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #FF0303, #FF0303), #FF0303;
+    border: 1px solid #000000;
+    margin-right: 7px;
+  }

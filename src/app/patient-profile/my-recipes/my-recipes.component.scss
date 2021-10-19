@@ -1,0 +1,144 @@
+.main__title {
+    width: 500px;
+    height: 54px;
+    background: #9fe5e9;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 3px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    color: #696d94 !important;
+}
+.drug__add-btn {
+    width: 120px;
+    height: 50px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 6px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #199096 !important;
+    display: block;
+    outline: none; 
+    border: 2px solid #3CB3BB;
+}
+.drug__item {
+    width: 120px;
+    height: auto;
+    display: flex; flex-wrap: wrap; flex-direction: row;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px 6px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #199096 !important;
+    display: block;
+    outline: none; 
+    border: 2px solid #3CB3BB;
+}
+.recipes {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color: #e3f6f7;
+    padding: 10px;
+    max-width: 1300px;
+    font-family: Noto Sans !important;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+}
+
+.recipes h4,
+.recipes a {
+    text-align: center;
+}
+
+.recipe_title,
+.information_recipe {
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.information_recipe a {
+    font-family: Noto Sans;
+    text-decoration-line: underline;
+    color: #3cb3bb !important;
+}
+.recipe_title div,
+.information_recipe div {
+    width: 20%;
+}
+.information_recipe {
+    background-color: #ffffff;
+}
+
+.load-get-btn {
+    display: flex;
+    margin-bottom: 60px;
+}
+.load-btn,
+.get-btn {
+    margin-right: 10px;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    color: #13757a;
+    outline: none;
+}
+
+.load-btn button,
+.get-btn button {
+    background: #e3f6f7;
+    margin-left: 8px;
+    font-size: 24px;
+    border-radius: 10px;
+    border-top: none;
+    border-bottom: none;
+    border-left: 10px solid #e3f6f7;
+    border-right: 10px solid #e3f6f7;
+}
+
+.new_search{
+    margin: 0 auto 100px;
+    width: 800px;
+    border-radius: 10px;
+    background: rgba(59, 179, 187, 0.22);
+    background-color: #69D2D9;
+}
+
+.new_search h2{
+    padding: 40px 0;
+    padding-left: 37%;
+    color: #ffffff;
+}
+.new_search img{
+    margin: 30px 10%;
+}
+
+.new_search label{
+    margin-left: 10%;
+}
+
+.send-btn{
+    margin-top: 100px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #199096 !important;
+    border: 2px solid #3CB3BB;
+    padding:10px 0 10px 40px;
+}

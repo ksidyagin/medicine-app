@@ -1,0 +1,68 @@
+<div class="container">
+    <h2 class="main__title">Мои рецепты</h2>
+
+    <div class="load-get-btn">
+        <div class="load-btn">
+            <img src="../../../../../assets/pics/patient-profile/load.png" alt="">
+            <button class="load-btn" type="submit">Загрузить рецепт</button>
+        </div>
+        <div class="get-btn">
+            <img src="../../../../../assets/pics/patient-profile/get.png" alt="">
+            <button class="get-btn" (click)="visible()" type="submit">Получить новый рецепт</button>
+        </div>
+    </div>
+
+
+    <div class="recipes" *ngIf="!flagVisibleForm">
+        <div class="recipe_title">
+            <div>
+                <h4></h4>
+            </div>
+            <div>
+                <h4>Номер рецепта</h4>
+            </div>
+            <div>
+                <h4>Препарат</h4>
+            </div>
+            <div>
+                <h4>Врач</h4>
+            </div>
+            <div>
+                <h4>Дата выписки рецепта</h4>
+            </div>
+
+        </div>
+        <div class="information_recipe" *ngFor='let recipe of recipes'>
+            <div>
+                <a [routerLink]="['','view-recipe']" routerLinkActive="active">Открыть</a>
+            </div>
+            <div>
+                <h4>{{recipe.number}}</h4>
+            </div>
+            <div>
+                <h4>{{recipe.medication}}</h4>
+            </div>
+            <div>
+                <h4>{{recipe.doctor}}</h4>
+            </div>
+            <div>
+                <h4>{{recipe.date}}</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="new_search" *ngIf="flagVisibleForm">
+        <h2>Новый рецепт</h2>
+        <label>Лекарственный препарат</label>
+        <p-autoComplete [(ngModel)]="medication" [suggestions]="filteredDrugNames" (completeMethod)="filterDrugName($event)" [minLength]="1" [dropdown]="true" style="margin-right:20px;width: 500px;height: 50px;">
+        </p-autoComplete>
+        <button style="float: right;" class="drug__add-btn" (click)="addMedication()">Добавить</button>
+        <div style="display: flex; flex-wrap: wrap; flex-direction: row;" *ngFor="let item of drugs">
+            <div class="drug__item">
+                {{item}}  X
+            </div>
+        </div>
+        
+        <div class="send-btn" >Отправить</div>
+    </div>
+</div>

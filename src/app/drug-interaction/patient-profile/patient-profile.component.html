@@ -1,0 +1,30 @@
+<div class="main__info">
+    <div class="container">
+        <div class="medmap">
+
+            <div class="medmap__menu">
+
+                <div class="medmap__menu-item">
+                    <a class="medmap__menu-link medmap__menu-link-active" [routerLink]="['', 'patient-profile', 'patient-database']" routerLinkActive="active">База пациентов</a>
+                </div>
+
+                <div class="medmap__menu-item">
+                    <a class="medmap__menu-link" [routerLink]="['', 'patient-profile', 'write-recipe']" routerLinkActive="active">Выписать рецепт</a>
+                </div>
+
+                <div class="medmap__menu-item">
+                    <a class="medmap__menu-link">Выписать направление</a>
+                </div>
+
+                <div class="medmap__menu-item">
+                    <a class="medmap__menu-link" [routerLink]="['', 'patient-profile', 'questionnaires']" routerLinkActive="active">Анкеты пациента</a>
+                </div>
+
+                <div class="medmap__menu-item">
+                    <a class="medmap__menu-link" [routerLink]="['', 'patient-profile', 'observation']" routerLinkActive="active">Наблюдение за пациентом</a>
+                </div>
+
+            </div>
+
+            <router-outlet> </router-outlet>
+        </div>

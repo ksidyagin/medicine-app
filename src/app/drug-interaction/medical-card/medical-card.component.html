@@ -1,0 +1,50 @@
+<div class="main__info">
+    <div class="container">
+        <div class="medmap">
+            <!-- поиск -->
+            <p-autoComplete class="main__autocomplete" [(ngModel)]="selectedSearchAdvanced" [suggestions]="filteredSearchs" (completeMethod)="filterSearch($event)" field="name" [dropdown]="true">
+                <ng-template let-search pTemplate="item">
+                    <div class="country-item">
+                        <div>{{search.lastName}} {{search.firstName}} {{search.patronymic}}</div>
+                    </div>
+                </ng-template>
+            </p-autoComplete>
+
+            <div class="medmap__menu">
+
+                <div class="medmap__menu-item">
+                    <a class="medmap__menu-link medmap__menu-link-active" [routerLink]="['', 'medical-card','pacient-map']" routerLinkActive="active">Моя карта</a>
+                </div>
+
+                <div class="medmap__menu-item">
+                    <a class="medmap__menu-link" [routerLink]="['', 'medical-card','my-recipes']" routerLinkActive="active">Мои рецепты</a>
+                </div>
+
+                <div class="medmap__menu-item">
+                    <a class="medmap__menu-link" [routerLink]="['', 'medical-card','my-analyzes']" routerLinkActive="active">Мои анализы</a>
+                </div>
+
+                <div class="medmap__menu-item">
+                    <a class="medmap__menu-link" [routerLink]="['', 'medical-card','my-research']" routerLinkActive="active">Мои исследования</a>
+                </div>
+
+                <div class="medmap__menu-item">
+                    <a class="medmap__menu-link" [routerLink]="['', 'medical-card','my-discharge']" routerLinkActive="active">Мои выписки</a>
+                </div>
+
+                <div class="medmap__menu-item">
+                    <a class="medmap__menu-link" [routerLink]="['', 'medical-card','my-vaccination']" routerLinkActive="active">Мои прививки</a>
+                </div>
+
+                <div class="medmap__menu-item">
+                    <a class="medmap__menu-link" [routerLink]="['', 'medical-card','my-reference']" routerLinkActive="active">Мои справки</a>
+                </div>
+
+                <div class="medmap__menu-item">
+                    <a class="medmap__menu-link" [routerLink]="['', 'medical-card','my-hospitals']" routerLinkActive="active">Мои больничные</a>
+                </div>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,170 @@
+.medmap__wrapper {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.profile__top {
+    display: flex;
+    margin-bottom: 38px;
+}
+
+.patient__list-item {
+    margin: 0 50px 38px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #C4EBED;
+    border-radius: 15px;
+    height: 310px;
+}
+
+.patient__list-img {
+    margin: 40px auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 167px;
+    height: 167px;
+}
+
+.patient__list-name {
+    width: 288px;
+    height: 86px;
+    background: #3CB3BB;
+    border-radius: 5px 5px 15px 15px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 18px;
+}
+
+.profile__top-name {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 49px;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.profile__top-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.profile__top-title {
+    font-weight: 700;
+}
+
+.profile__medmap-link {
+    width: 285px;
+    height: 44px;
+    background: #3CB3BB;
+    border-radius: 10px;
+    text-align: center;
+    padding: 6px 20px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #FFFFFF !important;
+    margin-top: 30px;
+}
+
+.profile__main {
+    width: 700px;
+}
+
+.profile__main-item {
+    margin-bottom: 20px;
+}
+
+.profile__main-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.profile__main-text {
+    width: 408px;
+    height: 35px;
+    background: rgba(196, 196, 196, 0.3);
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #383636;
+}
+
+.profile__main-title-mini {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #383A4D;
+    margin-bottom: 15px;
+}
+
+.profile-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    color: #3CB3BB;
+    margin-bottom: 25px;
+}
+.archive__wrapper {
+    width: 960px;
+    background: rgba(196, 196, 196, 0.3);
+    border-radius: 10px;
+    padding: 17px;
+  }
+  
+  .archive__table-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 33px;
+    margin-bottom: 16px;
+  }
+  
+  .archive__table-title {
+    width: 16%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    text-align: center;
+  }
+  
+  .archive__table-item {
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    width: 100%;
+    padding: 9px 33px;
+    margin-bottom: 11px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .archive__table-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    text-align: center;
+    width: 16%;
+  }
+  
+  .archive__table-link {
+    text-decoration-line: underline;
+    color: #000000 !important;
+  }

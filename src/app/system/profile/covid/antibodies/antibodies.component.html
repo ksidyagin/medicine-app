@@ -1,0 +1,280 @@
+<div class="antibodies__wrapper">
+    <h2 class="antibodies__title">Антитела</h2>
+
+    <p-accordion [multiple]="true">
+        <p-accordionTab class="antibodies__list-item" header="Запись на сдачу теста">
+
+            <h2 class="antibodies__list-title">Вид теста:</h2>
+
+            <div class="antibodies__list-top">
+                <button class="antibodies__list-top-item" (click)="covidTestIgM()">Антитела IgM</button>
+                <button class="antibodies__list-top-item" (click)="covidTestIgG()">Антитела IgG</button>
+                <button class="antibodies__list-top-item" (click)="covidTestAfterVac()">Антитела после вакцинации</button>
+            </div>
+
+            <div class="antibodies__main-item" *ngIf="covid_test==='IgM'">
+                <h2 class="antibodies__list-title">Виды теста на антитела IgM:</h2>
+                <div class="antibodies__list-test">
+                    <input class="antibodies__list-radio" type="radio" name="covid" id="">
+                    <p class="antibodies__list-text">Коронавирус SARS-CoV-2, антитела IgМ (Architect, Abbott)</p>
+                </div>
+                <div class="antibodies__list-test">
+                    <input class="antibodies__list-radio" type="radio" name="covid" id="">
+                    <p class="antibodies__list-text">Коронавирус SARS-CoV-2, антитела IgM (Mindray)</p>
+                </div>
+
+                <h3 class="antibodies__list-title">Регион*:</h3>
+                <p-autoComplete [(ngModel)]="selectedRegionAdvanced" [suggestions]="filteredRegions" (completeMethod)="filterRegion($event)" field="name" [dropdown]="true">
+                    <ng-template let-region pTemplate="item">
+                        <div class="country-item">
+                            <div>{{region.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+
+                <h3 class="antibodies__list-title">Населенный пункт*:</h3>
+                <p-autoComplete [(ngModel)]="selectedLocalityAdvanced" [suggestions]="filteredLocalitys" (completeMethod)="filterLocality($event)" field="name" [dropdown]="true">
+                    <ng-template let-locality pTemplate="item">
+                        <div class="country-item">
+                            <div>{{locality.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+
+                <h3 class="antibodies__list-title">Тип учреждения*:</h3>
+                <p-autoComplete [(ngModel)]="selectedInstitutionTypeAdvanced" [suggestions]="filteredInstitutionTypes" (completeMethod)="filterInstitutionType($event)" field="name" [dropdown]="true">
+                    <ng-template let-institutiontype pTemplate="item">
+                        <div class="country-item">
+                            <div>{{institutiontype.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+
+                <h3 class="antibodies__list-title">Название учреждения*:</h3>
+                <p-autoComplete [(ngModel)]="selectedInstitutionNameAdvanced" [suggestions]="filteredInstitutionNames" (completeMethod)="filterInstitutionName($event)" field="name" [dropdown]="true">
+                    <ng-template let-institutionname pTemplate="item">
+                        <div class="country-item">
+                            <div>{{institutionname.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+
+                <h3 class="antibodies__list-title">Выберите дату прихода:</h3>
+                <p-calendar [firstDayOfWeek]="1" [(ngModel)]="value" dateFormat="dd.mm.yy"></p-calendar>
+
+                <div class="antibodies__time">
+                    <h4 class="antibodies__list-title">Выберите временной диапазон визита:</h4>
+
+                    <div class="antibodies__timelist">
+                        <a class="antibodies__timelist-item" href="#">08:30</a>
+                        <a class="antibodies__timelist-item" href="#">08:45</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">08:30</a>
+                        <a class="antibodies__timelist-item" href="#">08:45</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">08:30</a>
+                        <a class="antibodies__timelist-item" href="#">08:45</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">08:30</a>
+                        <a class="antibodies__timelist-item" href="#">08:45</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                    </div>
+                    <a class="antibodies__list-btn" href="">Готово</a>
+                </div>
+            </div>
+
+            <div class="antibodies__main-item" *ngIf="covid_test==='IgG'">
+                <h2 class="antibodies__list-title">Виды теста на антитела IgM:</h2>
+                <div class="antibodies__list-test">
+                    <input class="antibodies__list-radio" type="radio" name="covid" id="">
+                    <p class="antibodies__list-text">Коронавирус SARS-CoV-2, антитела IgG к N-белку (Architect, Abbott)</p>
+                </div>
+                <div class="antibodies__list-test">
+                    <input class="antibodies__list-radio" type="radio" name="covid" id="">
+                    <p class="antibodies__list-text">Коронавирус SARS-CoV-2, антитела IgG (Mindray)</p>
+                </div>
+
+                <h3 class="antibodies__list-title">Регион*:</h3>
+                <p-autoComplete [(ngModel)]="selectedRegionAdvanced" [suggestions]="filteredRegions" (completeMethod)="filterRegion($event)" field="name" [dropdown]="true">
+                    <ng-template let-region pTemplate="item">
+                        <div class="country-item">
+                            <div>{{region.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+
+                <h3 class="antibodies__list-title">Населенный пункт*:</h3>
+                <p-autoComplete [(ngModel)]="selectedLocalityAdvanced" [suggestions]="filteredLocalitys" (completeMethod)="filterLocality($event)" field="name" [dropdown]="true">
+                    <ng-template let-locality pTemplate="item">
+                        <div class="country-item">
+                            <div>{{locality.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+
+                <h3 class="antibodies__list-title">Тип учреждения*:</h3>
+                <p-autoComplete [(ngModel)]="selectedInstitutionTypeAdvanced" [suggestions]="filteredInstitutionTypes" (completeMethod)="filterInstitutionType($event)" field="name" [dropdown]="true">
+                    <ng-template let-institutiontype pTemplate="item">
+                        <div class="country-item">
+                            <div>{{institutiontype.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+
+                <h3 class="antibodies__list-title">Название учреждения*:</h3>
+                <p-autoComplete [(ngModel)]="selectedInstitutionNameAdvanced" [suggestions]="filteredInstitutionNames" (completeMethod)="filterInstitutionName($event)" field="name" [dropdown]="true">
+                    <ng-template let-institutionname pTemplate="item">
+                        <div class="country-item">
+                            <div>{{institutionname.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+
+                <h3 class="antibodies__list-title">Выберите дату прихода:</h3>
+                <p-calendar [firstDayOfWeek]="1" [(ngModel)]="value" dateFormat="dd.mm.yy"></p-calendar>
+
+                <div class="antibodies__time">
+                    <h4 class="antibodies__list-title">Выберите временной диапазон визита:</h4>
+
+                    <div class="antibodies__timelist">
+                        <a class="antibodies__timelist-item" href="#">08:30</a>
+                        <a class="antibodies__timelist-item" href="#">08:45</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">08:30</a>
+                        <a class="antibodies__timelist-item" href="#">08:45</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">08:30</a>
+                        <a class="antibodies__timelist-item" href="#">08:45</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">08:30</a>
+                        <a class="antibodies__timelist-item" href="#">08:45</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                    </div>
+                    <a class="antibodies__list-btn" href="">Готово</a>
+                </div>
+            </div>
+
+            <div class="antibodies__main-item" *ngIf="covid_test==='AfterVac'">
+                <h2 class="antibodies__list-title">Виды теста на антитела IgM:</h2>
+                <div class="antibodies__list-test">
+                    <input class="antibodies__list-radio" type="radio" name="covid" id="">
+                    <p class="antibodies__list-text">Коронавирус SARS-CoV-2, нейтрализующие антитела IgG к RBD домену S-белка (Architect, Abbott)</p>
+                </div>
+                <div class="antibodies__list-test">
+                    <input class="antibodies__list-radio" type="radio" name="covid" id="">
+                    <p class="antibodies__list-text">Коронавирус SARS-CoV-2, нейтрализующие антитела к S-белку (Roche)</p>
+                </div>
+                <div class="antibodies__list-test">
+                    <input class="antibodies__list-radio" type="radio" name="covid" id="">
+                    <p class="antibodies__list-text">Коронавирус SARS-CoV-2, антитела IgG после вакцинации препаратом «ЭпиВакКорона», п/кол. (ГНЦ ВБ «Вектор»)</p>
+                </div>
+
+                <h3 class="antibodies__list-title">Регион*:</h3>
+                <p-autoComplete [(ngModel)]="selectedRegionAdvanced" [suggestions]="filteredRegions" (completeMethod)="filterRegion($event)" field="name" [dropdown]="true">
+                    <ng-template let-region pTemplate="item">
+                        <div class="country-item">
+                            <div>{{region.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+
+                <h3 class="antibodies__list-title">Населенный пункт*:</h3>
+                <p-autoComplete [(ngModel)]="selectedLocalityAdvanced" [suggestions]="filteredLocalitys" (completeMethod)="filterLocality($event)" field="name" [dropdown]="true">
+                    <ng-template let-locality pTemplate="item">
+                        <div class="country-item">
+                            <div>{{locality.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+
+                <h3 class="antibodies__list-title">Тип учреждения*:</h3>
+                <p-autoComplete [(ngModel)]="selectedInstitutionTypeAdvanced" [suggestions]="filteredInstitutionTypes" (completeMethod)="filterInstitutionType($event)" field="name" [dropdown]="true">
+                    <ng-template let-institutiontype pTemplate="item">
+                        <div class="country-item">
+                            <div>{{institutiontype.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+
+                <h3 class="antibodies__list-title">Название учреждения*:</h3>
+                <p-autoComplete [(ngModel)]="selectedInstitutionNameAdvanced" [suggestions]="filteredInstitutionNames" (completeMethod)="filterInstitutionName($event)" field="name" [dropdown]="true">
+                    <ng-template let-institutionname pTemplate="item">
+                        <div class="country-item">
+                            <div>{{institutionname.name}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+
+                <h3 class="antibodies__list-title">Выберите дату прихода:</h3>
+                <p-calendar [firstDayOfWeek]="1" [(ngModel)]="value" dateFormat="dd.mm.yy"></p-calendar>
+
+                <div class="antibodies__time">
+                    <h4 class="antibodies__list-title">Выберите временной диапазон визита:</h4>
+
+                    <div class="antibodies__timelist">
+                        <a class="antibodies__timelist-item" href="#">08:30</a>
+                        <a class="antibodies__timelist-item" href="#">08:45</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">08:30</a>
+                        <a class="antibodies__timelist-item" href="#">08:45</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">08:30</a>
+                        <a class="antibodies__timelist-item" href="#">08:45</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">08:30</a>
+                        <a class="antibodies__timelist-item" href="#">08:45</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                        <a class="antibodies__timelist-item" href="#">09:00</a>
+                    </div>
+                    <a class="antibodies__list-btn" href="">Готово</a>
+                </div>
+            </div>
+
+        </p-accordionTab>
+
+        <p-accordionTab class="antibodies__list-item" header="Общая информация">
+            <p class="antibodies__list-text">
+                <span class="antibodies__list-title">
+                    Сдать кровь на антитела: 
+                </span>
+                <span>800 рублей.</span>
+            </p>
+
+            <p class="antibodies__list-text">
+                <span class="antibodies__list-title">
+                    Сдать кровь на антитела с указанием колличества антител: 
+                </span> 1500 рублей.
+            </p>
+        </p-accordionTab>
+
+        <p-accordionTab class="antibodies__list-item" header="Результаты теста на антитела">
+            <p class="antibodies__list-text">
+                <span class="antibodies__list-title">
+                    Результат: 
+                </span> у вас обнаружены антитела в крови.
+            </p>
+
+            <a class="antibodies__list-btn" href="">Справка</a>
+        </p-accordionTab>
+
+
+
+    </p-accordion>
+</div>

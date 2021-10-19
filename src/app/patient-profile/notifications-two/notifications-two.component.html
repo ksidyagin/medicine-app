@@ -1,0 +1,62 @@
+<div class="account">
+    <div class="account__wrapper">
+      <h2 class="profile-title">Уведомление</h2>
+  
+      <div class="view__wrapper">
+        <h3 class="view__title">Информация:</h3>
+        <hr>
+        <div class="view__item">
+          <p class="view__item-title">Тип заявления:</p>
+          <p class="view__item-value-color">Запись на прием</p>
+        </div>
+  
+        <div class="view__item">
+          <p class="view__item-title">Дата:</p>
+          <p class="view__item-value">21.09.21</p>
+        </div>
+  
+        <div class="view__item">
+          <p class="view__item-title">Код пользователя:</p>
+          <p class="view__item-value">01-01-0823</p>
+        </div>
+  
+        <div class="view__item">
+          <p class="view__item-title">ФИО:</p>
+          <p class="view__item-value">Иванов Иван Иванович</p>
+        </div>
+  
+        <div class="view__item">
+          <p class="view__item-title">Отправитель:</p>
+          <p class="view__item-value">Иванова Марина Петрована</p>
+        </div>
+        <hr>
+      </div>
+  <br><br>
+      <div *ngIf="diagnos_notification1 != '' && diagnos_notification1" class="view__wrapper">
+        <h3 class="view__title">Запись на прием</h3>
+        <hr>
+          <p class="view__item-notification">По результатам анкетирования:</p>
+        <div class="view__item">
+          <p class="view__item-not">{{diagnos_notification1}}
+          </p>
+        </div>
+        <div class="view__qr-btns">
+          <a class="view__qr-btn" href="#">Записаться на прием</a>
+        </div>
+      </div>
+  
+    <br>
+    <br>
+    <div class="view__wrapper">
+      <h3 class="view__title">Написать медсестре:</h3>
+      <hr>
+      <input class="input_text" placeholder="Ваш комментарий...">
+      <div class="view__qr-btns">
+        <a class="send-btn" href="#">Отправить</a>
+      </div>
+    </div>
+    </div>
+  </div>
+  
+  
+  

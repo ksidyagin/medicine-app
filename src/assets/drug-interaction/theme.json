@@ -1,0 +1,7 @@
+{
+    "data": [
+        { "name": "Общесомантическая анкета", "code": "general-test" },
+        { "name": "Специализированная анкета", "code": "special-test" },
+        { "name": "Самочувствие", "code": "health" }
+    ]
+}

@@ -1,0 +1,132 @@
+<div class="main__info">
+    <div class="container">
+        <h2 class="main__title">Список препаратов</h2>
+
+        <div class="drug__patient">
+            <h3 class="drug__patient-title">Пациент:</h3>
+            <p class="drug__patient-name">Иванов И.С.</p>
+        </div>
+
+        <form class="store__list">
+            <div class="store__list-item">
+                <p class="store__list-title">Название диагноза:</p>
+                <p-autoComplete class="store__autocomplete" [(ngModel)]="selectedSearchAdvanced" [suggestions]="filteredSearchs" (completeMethod)="filterSearch($event)" field="name" [dropdown]="true">
+                    <ng-template let-search pTemplate="item">
+                        <div class="country-item">
+                            <div>{{search.lastName}} {{search.firstName}} {{search.patronymic}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+            </div>
+
+            <div class="store__list-mini">
+                <div class="store__list-item">
+                    <p class="store__list-title">Действующее вещество:</p>
+                    <p-autoComplete class="store__autocomplete" [(ngModel)]="selectedActiveAdvanced" [suggestions]="filteredActives" (completeMethod)="filterActive($event)" field="name" [dropdown]="true">
+                        <ng-template let-active pTemplate="item">
+                            <div class="country-item">
+                                <div>{{active.name}}</div>
+                            </div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+
+                <div class="store__list-item">
+                    <p class="store__list-title">Группа:</p>
+                    <p-autoComplete class="store__autocomplete" [(ngModel)]="selectedGroupAdvanced" [suggestions]="filteredGroups" (completeMethod)="filterGroup($event)" field="name" [dropdown]="true">
+                        <ng-template let-group pTemplate="item">
+                            <div class="country-item">
+                                <div>{{group.name}}</div>
+                            </div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+
+                <div class="store__list-item">
+                    <p class="store__list-title">Цена:</p>
+                    <p-autoComplete class="store__autocomplete" [(ngModel)]="selectedPriceAdvanced" [suggestions]="filteredPrices" (completeMethod)="filterPrice($event)" field="name" [dropdown]="true">
+                        <ng-template let-price pTemplate="item">
+                            <div class="country-item">
+                                <div>{{price.name}}</div>
+                            </div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+
+                <div class="store__list-item">
+                    <p class="store__list-title">Форма выпуска:</p>
+                    <p-autoComplete class="store__autocomplete" [(ngModel)]="selectedEditionAdvanced" [suggestions]="filteredEditions" (completeMethod)="filterEdition($event)" field="name" [dropdown]="true">
+                        <ng-template let-edition pTemplate="item">
+                            <div class="country-item">
+                                <div>{{edition.name}}</div>
+                            </div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+
+                <div class="store__list-item">
+                    <p class="store__list-title">Дженерики:</p>
+                    <p-autoComplete class="store__autocomplete" [(ngModel)]="selectedGenericAdvanced" [suggestions]="filteredGenerics" (completeMethod)="filterGeneric($event)" field="name" [dropdown]="true">
+                        <ng-template let-generic pTemplate="item">
+                            <div class="country-item">
+                                <div>{{generic.name}}</div>
+                            </div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+            </div>
+
+            <button class="store-btn" type="submit">Поиск</button>
+
+        </form>
+
+        <div class="store__items">
+            <div class="store__item">
+                <div class="store__item-info">
+                    <h4 class="store__item-title"></h4>
+
+                    <a class="store__item-instruction">Инструкция к препарату</a>
+
+                    <p class="store__item-text">
+                        <span class="store__item-underline">Действующее вещество (МНН):</span>
+                    </p>
+
+                    <p class="store__item-text">
+                        <span class="store__item-underline">Группа:</span>
+                    </p>
+
+                    <a class="store__item-link" href="">Проверить взаимодействие</a>
+                </div>
+
+                <div class="store__item-price">
+                    <h3 class="store__price-title"> руб.</h3>
+                    <p class="store__price-text">(примерная стоимость)</p>
+                </div>
+            </div>
+
+            <div class="store__item">
+                <div class="store__item-info">
+                    <h4 class="store__item-title"></h4>
+
+                    <a class="store__item-instruction">Инструкция к препарату</a>
+
+                    <p class="store__item-text">
+                        <span class="store__item-underline">Действующее вещество (МНН):</span>
+                    </p>
+
+                    <p class="store__item-text">
+                        <span class="store__item-underline">Группа:</span>
+                    </p>
+
+                    <a class="store__item-link" href="">Проверить взаимодействие</a>
+                </div>
+
+                <div class="store__item-price">
+                    <h3 class="store__price-title"> руб.</h3>
+                    <p class="store__price-text">(примерная стоимость)</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

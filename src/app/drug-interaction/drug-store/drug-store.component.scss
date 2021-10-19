@@ -1,0 +1,173 @@
+.main__title {
+    width: 500px;
+    height: 54px;
+    background: #9FE5E9;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 3px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    color: #696D94 !important;
+}
+
+.drug__patient {
+    width: 334px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 2px solid #3CB3BB;
+    border-radius: 10px;
+    padding: 4px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.drug__patient-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #000000;
+    margin-right: 10px;
+}
+
+.drug__patient-name {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #000000;
+}
+
+.store__list {
+    margin: 0 auto 70px;
+    width: 950px;
+    text-align: center;
+}
+
+.store__list .store__list-item {
+    width: 100%;
+    margin-bottom: 29px;
+    &:nth-child(1) .store__list-title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        color: #199096;
+        margin-bottom: 10px;
+    }
+}
+
+.store__list-mini .store__list-item {
+    max-width: 240px;
+    margin-bottom: 29px;
+    & .store__list-title {
+        font-weight: 400 !important;
+        font-size: 18px;
+        line-height: 25px;
+        color: #000000 !important;
+        margin-bottom: 10px;
+    }
+}
+
+.store__list-mini {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.store-btn {
+    width: 157px;
+    background: #FFFFFF;
+    border: 2px solid #199096;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 7px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #199096 !important;
+}
+
+.store__items {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.store__item {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 100%;
+    margin: 0 auto 55px;
+}
+
+.store__item-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.store__item-instruction {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: #199096 !important;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.store__item-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.store__item-underline {
+    text-decoration-line: underline;
+}
+
+.store__item-link {
+    width: 287px;
+    height: 32px;
+    background: #199096;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 25px;
+    padding: 3px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF !important;
+}
+
+.store__item-price {
+    width: 20%;
+    text-align: center;
+}
+
+.store__price-title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    color: #000000;
+}
+
+.store__price-text {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    color: #000000;
+}

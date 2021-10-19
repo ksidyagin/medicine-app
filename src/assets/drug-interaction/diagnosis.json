@@ -1,0 +1,10 @@
+{
+    "data": [
+        { "name": "Акне", "code": "Acne" },
+        { "name": "Бессоница", "code": "Insomnia" },
+        { "name": "Диарея", "code": "Diarrhea" },
+        { "name": "Инсульт", "code": "Stroke" },
+        { "name": "Псориаз", "code": "Psoriasis" },
+        { "name": "Панкреатит", "code": "Pancreatitis" }
+    ]
+}

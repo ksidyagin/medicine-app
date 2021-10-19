@@ -1,0 +1,33 @@
+.main__title {
+    width: 309px;
+    height: 49px;
+    background: #9FE5E9;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 3px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    color: #696D94 !important;
+}
+
+.section__title{
+    width: 294px;
+    height: 54px;
+    background: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 3px;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 48px;
+    border: 1px solid #3CB5BB;
+    color: #1D8187 !important;
+}
+
+.questionaries__list{
+    font-size: 14px;
+}
+

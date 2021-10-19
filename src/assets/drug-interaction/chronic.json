@@ -1,0 +1,6 @@
+{
+    "data": [
+        { "name": "Хронический панкреатит", "code": "Chronic-pancreatitis" },
+        { "name": "Хронический тонзиллит", "code": "Chronic-tonsillitis" }
+    ]
+}

@@ -1,0 +1,56 @@
+<div class="account">
+  <div class="account__wrapper">
+    <h2 class="profile-title">Самодиагностика</h2>
+
+    <h3 class="question__title">Скрининг на наличие заболеваний
+      <img class="question__title-img" src="../../../assets/pics/san-card/pic_1.png" alt="">
+    </h3>
+
+    <div class="question__top">
+      <a class="question__top-link" (click)="get_anket(1)">Онкориск</a>
+      <a class="question__top-link" href="#">Остеопороз</a>
+      <a class="question__top-link" href="#">Заболевание щитовидной железы</a>
+      <a class="question__top-link" href="#">Старческая астения</a>
+    </div>
+
+    <h3 class="question__title">Мои анкеты
+      <img class="question__title-img" src="../../../assets/pics/san-card/pic_2.png" alt="">
+    </h3>
+
+    <div class="question__wrapper">
+      <div class="question__table">
+        <div class="question__table-top">
+          <p class="question__table-title" style="width: 12%;"></p>
+          <p class="question__table-title">Код</p>
+          <p class="question__table-title">ФИО</p>
+          <p class="question__table-title">Код пользователя</p>
+          <p class="question__table-title">Дата подачи</p>
+          <p class="question__table-title">Статус</p>
+          <p class="question__table-title">Тема заявления</p>
+        </div>
+
+        <div class="question__table-item">
+          <a class="question__table-text question__table-link" [routerLink]="['','questiong-view']" routerLinkActive="active">Открыть</a>
+          <p class="question__table-text">01-000001</p>
+          <p class="question__table-text">Иванов Иван Сергеевич</p>
+          <p class="question__table-text">01-01-0101</p>
+          <p class="question__table-text">12:56 19.08.21</p>
+          <p class="question__table-text question__table-status">
+            <span class="question__table-status-red"></span> ждет обработки</p>
+          <p class="question__table-text">общий тест</p>
+        </div>
+
+        <div class="question__table-item">
+          <a class="question__table-text question__table-link" [routerLink]="['','questiong-view']" routerLinkActive="active">Открыть</a>
+          <p class="question__table-text">01-000001</p>
+          <p class="question__table-text">Иванов Иван Сергеевич</p>
+          <p class="question__table-text">01-01-0101</p>
+          <p class="question__table-text">12:56 19.08.21</p>
+          <p class="question__table-text question__table-status">
+            <span class="question__table-status-yellow"></span> обрабатывается</p>
+          <p class="question__table-text">общий тест</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

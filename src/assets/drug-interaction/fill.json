@@ -1,0 +1,6 @@
+{
+    "data": [
+        { "name": "Врач", "code": "Doctor" },
+        { "name": "Пациент", "code": "Patient" }
+    ]
+}

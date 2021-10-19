@@ -1,0 +1,394 @@
+<div class="account__wrapper">
+    <h2 class="profile-title">Анкетирование</h2>
+
+    <div class="questioning__wrapper">
+        <div class="questioning__inner">
+            <ul class="questioning__list">
+                <li class="question__list-item">
+                    <div class="questioning__list-que">
+                    <p class="questioning__list-number">1</p>
+                    <p class="questioning__list-text">Имеется ли у Вас отягощённая наследственность по онкопатологии желудка?</p>
+                    </div>
+                    <div class="questioning__list-answers">
+                    <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-1" (click)="specialized__que_yes()">
+                    </div>
+                    <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-1" (click)="specialized__que_no()">
+                    </div>
+                    </div>
+                </li>
+                <hr>
+
+                <li class="question__list-item">
+                    <div class="questioning__list-que">
+                    <p class="questioning__list-number">2</p>
+                    <p class="questioning__list-text">Соблюдаете ли Вы диету (отказ от острого, копчёного, жаренного)?<br><br><br>
+                        Вызывают ли у Вас усиление жалоб приём в пищу таких продуктов, как красный перец, лук, майонез, орехи, цитрусовые,шоколад, кофе, газированные напитки?</p>
+                    </div>
+                    <div class="questioning__list-answers">
+                    <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-2" (click)="specialized__que_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-2" (click)="specialized__que_yes()">
+                    </div>
+                    <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-2" (click)="specialized__que_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-2" (click)="specialized__que_no()">
+                    </div>
+                    </div>
+                </li>
+                <hr>
+
+                <li class="question__list-item">
+                    <div class="questioning__list-que">
+                    <p class="questioning__list-number">3</p>
+                    <p class="questioning__list-text">Курите ли Вы?</p>
+                    </div>
+                    <div class="questioning__list-answers">
+                    <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-3" (click)="specialized__que_yes()">
+                    </div>
+                    <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-3" (click)="specialized__que_no()">
+                    </div>
+                    </div>
+                </li>
+                <hr>
+
+                <li class="question__list-item">
+                    <div class="questioning__list-que">
+                    <p class="questioning__list-number">4</p>
+                    <p class="questioning__list-text">Переносили ли Вы пищевую токсикоинфекцию?</p>
+                    </div>
+                    <div class="questioning__list-answers">
+                    <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-4" (click)="general__que_all_yes()">
+                    </div>
+                    <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-4" (click)="general__que_all_no()">
+                    </div>
+                    </div>
+                </li>
+                <hr>
+
+                <li class="question__list-item">
+                    <div class="questioning__list-que">
+                    <p class="questioning__list-number">5</p>
+                    <p class="questioning__list-text">Предшествует ли воздействие хронических стрессовых факторов (семейных, производственных, финансовых, жилищных и др.) усилению жалоб со стороны желудка?</p>
+                    </div>
+                    <div class="questioning__list-answers">
+                    <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-5" (click)="general__que_all_yes()">
+                    </div>
+                    <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-5" (click)="general__que_all_no()">
+                    </div>
+                    </div>
+                </li>
+                <hr>
+
+                <li class="question__list-item">
+                    <div class="questioning__list-que">
+                    <p class="questioning__list-number">6</p>
+                    <p class="questioning__list-text"><b>Диагносцировались ли у Вас ранее</b><br><br><br>
+                        язвенная болезнь и лекарственные эрозивно-язвенные поражения желудка и двенадцатиперстной кишки, <br><br><br>
+                        злокачественные опухоли желудка, <br><br><br>
+                        поджелудочной железы, <br><br><br>
+                        хронический панкреатит, <br><br><br>
+                        гастроэзофагеальная рефлюксная болезнь, <br><br><br>
+                        желчекаменная болезнь, <br><br><br>
+                        целиакия, <br><br><br>
+                        сахарный диабет, <br><br><br>
+                        системная склеродермия, <br><br><br>
+                        болезнь Менетрие, <br><br><br>
+                        болезнь Крона, <br><br><br>
+                        амилоидоз, <br><br><br>
+                        саркоидоз, <br><br><br>
+                        хроническая сердечная недостаточность, <br><br><br>
+                        хроническая почечная недостаточность, <br><br><br>
+                        гипертиреоз, <br><br><br>
+                        гипотиреоз, <br><br><br>
+                        хроническая надпочечниковая недостаточность?</p>
+                    </div>
+                    <div class="questioning__list-answers">
+                    <div class="questioning__list-answer">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_yes()">
+                    </div>
+                    <div class="questioning__list-answer">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="general__que_all_no()">
+                    </div>
+                    </div>
+                </li>
+                <hr>
+
+                <li class="question__list-item">
+                    <div class="questioning__list-que">
+                    <p class="questioning__list-number">7</p>
+                    <p class="questioning__list-text"><b>Проходили ли Вы обследование:</b><br><br><br>
+                        общий анализ крови<br><br><br>
+                        биохимический анализ крови,<br><br><br>
+                        копрограмма,<br><br><br>
+                        гастродуоденоскопия,<br><br><br>
+                        исследование для выявления пилорического хеликобактера<br><br><br>
+                        ультразвуковое исследование брюшной полости?<br><br><br>
+                    </p>
+                    </div>
+                    <div class="questioning__list-answers">
+                    <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" (click)="que7_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" (click)="que7_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" (click)="que7_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" (click)="que7_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" (click)="que7_yes()">
+                        <br>
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" (click)="que7_yes()">
+                    </div>
+                    <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" (click)="que7_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" (click)="que7_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" (click)="que7_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" (click)="que7_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" (click)="que7_no()">
+                        <br>
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" (click)="que7_no()">
+                    </div>
+                    </div>
+                </li>
+                <hr>
+            </ul>
+
+            <div *ngIf="que_all===false">
+                <ul class="questioning__list">
+
+                    <h3 class="questioning__title"><b>Есть ли у Вас следующие жалобы:</b></h3>
+
+                    <li class="question__list-item">
+                    <div class="questioning__list-que">
+                        <p class="questioning__list-number">8</p>
+                        <p class="questioning__list-text">Беспокоят ли Вас боли в эпигастральной области?</p>
+                    </div>
+                    <div class="questioning__list-answers">
+                        <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-5" (click)="que_8_12_yes()">
+                        </div>
+                        <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-5">
+                        </div>
+                    </div>
+                    </li>
+                    <hr>
+
+                    <li class="question__list-item">
+                    <div class="questioning__list-que">
+                        <p class="questioning__list-number">9</p>
+                        <p class="questioning__list-text">Беспокоит ли Вас жжение в эпигастральной области?</p>
+                    </div>
+                    <div class="questioning__list-answers">
+                        <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-6" (click)="que_8_12_yes()">
+                        </div>
+                        <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-6">
+                        </div>
+                    </div>
+                    </li>
+                    <hr>
+
+                    <li class="question__list-item">
+                    <div class="questioning__list-que">
+                        <p class="questioning__list-number">10</p>
+                        <p class="questioning__list-text">Беспокоит ли Вас чувство переполнения в эпигастральной области после еды (неприятное ощущение длительной задержки пищи в желудке)?</p>
+                    </div>
+                    <div class="questioning__list-answers">
+                        <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" (click)="que_8_12_yes()">
+                        </div>
+                        <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-7" >
+                        </div>
+                    </div>
+                    </li>
+                    <hr>
+
+                    <li class="question__list-item">
+                    <div class="questioning__list-que">
+                        <p class="questioning__list-number">11</p>
+                        <p class="questioning__list-text">Беспокоит ли Вас раннее насыщение (чувство переполнения желудка, возникающее вскоре после начала приема пищи независимо от ее объема, вследствие чего прием пищи не может быть завершен)</p>
+                    </div>
+                    <div class="questioning__list-answers">
+                        <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-8" (click)="que_8_12_yes()">
+                        </div>
+                        <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-8" >
+                        </div>
+                    </div>
+                    </li>
+                    <hr>
+
+                    <li class="question__list-item">
+                    <div class="questioning__list-que">
+                        <p class="questioning__list-number">12</p>
+                        <p class="questioning__list-text">Отмечаются ли у Вас выраженное похудание,наличие крови в кале, бледность кожи и слизистых (снижение уровня гемоглобина)?</p>
+                    </div>
+                    <div class="questioning__list-answers">
+                        <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Да</p>
+                        <input class="questioning__list-input" type="radio" name="que-9" (click)="que_8_12_yes()">
+                        </div>
+                        <div class="questioning__list-answer">
+                        <p class="questioning__list-answer-text">Нет</p>
+                        <input class="questioning__list-input" type="radio" name="que-9" >
+                        </div>
+                    </div>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+        </div>
+
+      <a class="questioning__link" (click)="saveDiagnos()"  [routerLink]="['', 'online-appointment-patient','online-step-result']" routerLinkActive="active">Далее</a>
+    </div>
+</div>

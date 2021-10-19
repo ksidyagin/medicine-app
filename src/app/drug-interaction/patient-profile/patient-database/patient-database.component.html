@@ -1,0 +1,32 @@
+<div class="main__info">
+   
+        <h2 class="main__title">База данных пациентов</h2>
+
+        <!-- поиск -->
+        <p-autoComplete class="main__autocomplete" [(ngModel)]="selectedSearchAdvanced" [suggestions]="filteredSearchs" (completeMethod)="filterSearch($event)" field="name" [dropdown]="true">
+            <ng-template let-search pTemplate="item">
+                <div class="country-item">
+                    <div>{{search.lastName}} {{search.firstName}} {{search.patronymic}}</div>
+                </div>
+            </ng-template>
+        </p-autoComplete>
+
+        <div class="patient__list">
+            <div class="patient__list-item" [routerLink]="['', 'patient-profile', 'patient']" routerLinkActive="active">
+                <img class="patient__list-img" src="../../../assets/drug-interaction/pics/profile.png" alt="">
+                <p class="patient__list-name">Иванов И.С.</p>
+            </div>
+
+            <div class="patient__list-item" [routerLink]="['', 'patient-profile', 'patient']" routerLinkActive="active">
+                <img class="patient__list-img" src="../../../assets/drug-interaction/pics/profile.png" alt="">
+                <p class="patient__list-name">Иванов И.С.</p>
+            </div>
+
+            <div class="patient__list-item" [routerLink]="['', 'patient-profile', 'patient']" routerLinkActive="active">
+                <img class="patient__list-img" src="../../../assets/drug-interaction/pics/profile.png" alt="">
+                <p class="patient__list-name">Иванов И.С.</p>
+            </div>
+        </div>
+
+ 
+</div>

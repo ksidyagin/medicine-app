@@ -1,0 +1,64 @@
+<h2 class="main__title">Анкеты пациента</h2>
+
+<div class="questionnaires__top">
+    <div class="questionnaires__top-item">
+        <p class="questionnaires__top-title">Тема:</p>
+        <p-autoComplete class="questionnaires__top-autocomplete" [(ngModel)]="selectedThemeAdvanced" [suggestions]="filteredThemes" (completeMethod)="filterTheme($event)" field="name" [dropdown]="true">
+            <ng-template let-theme pTemplate="item">
+                <div class="country-item">
+                    <div>{{theme.name}}</div>
+                </div>
+            </ng-template>
+        </p-autoComplete>
+    </div>
+
+    <div class="questionnaires__top-item">
+        <p class="questionnaires__top-title">Дата сдачи:</p>
+        <p-autoComplete class="questionnaires__top-autocomplete" [(ngModel)]="selectedDateAdvanced" [suggestions]="filteredDates" (completeMethod)="filterDate($event)" field="name" [dropdown]="true">
+            <ng-template let-date pTemplate="item">
+                <div class="country-item">
+                    <div>{{date.name}}</div>
+                </div>
+            </ng-template>
+        </p-autoComplete>
+    </div>
+
+    <div class="questionnaires__top-item">
+        <p class="questionnaires__top-title">Кем заполнена:</p>
+        <p-autoComplete class="questionnaires__top-autocomplete" [(ngModel)]="selectedFillAdvanced" [suggestions]="filteredFills" (completeMethod)="filterFill($event)" field="name" [dropdown]="true">
+            <ng-template let-fill pTemplate="item">
+                <div class="country-item">
+                    <div>{{fill.name}}</div>
+                </div>
+            </ng-template>
+        </p-autoComplete>
+    </div>
+
+</div>
+
+<button class="questionnaires__top-btn" (click)="search()">Поиск</button>
+
+<div class="questionnaires__main">
+    <div class="questionnaires__main-top">
+        <h4 class="questionnaires__main-title">Тема</h4>
+        <h4 class="questionnaires__main-title">Анкета</h4>
+        <h4 class="questionnaires__main-title">Дата сдачи</h4>
+        <h4 class="questionnaires__main-title">Кем заполнена</h4>
+    </div>
+
+    <div *ngFor="let que of questionCards">
+        <div class="questionnaires__main-list">
+            <p class="questionnaires__list-item">{{que.theme}}</p>
+            <!-- темы:  "Общесомантическая анкета"
+                        "Специализированная анкета"
+                        "Самочувствие" -->
+
+            <p class="questionnaires__list-item"><a>Посмотреть</a></p>
+
+            <p class="questionnaires__list-item">{{que.date}}</p>
+
+            <p class="questionnaires__list-item">{{que.filling}}</p>
+            <!-- заполнил:  Врач или пациент -->
+        </div>
+    </div>
+</div>

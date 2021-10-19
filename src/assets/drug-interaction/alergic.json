@@ -1,0 +1,10 @@
+{
+    "data": [
+        { "name": "Цетиризин", "code": "Cetirizine" },
+        { "name": "Хифенадин", "code": "Hifenadine" },
+        { "name": "Фексофенадин", "code": "Fexofenadine" },
+        { "name": "Лоратадин", "code": "Loratadin" },
+        { "name": "Кетотифен", "code": "Ketotifen" },
+        { "name": "Дезлоратадин", "code": "Desloratadine" }
+    ]
+}

@@ -1,0 +1,79 @@
+<div class="declaration__title">
+    Заявление № {{declaration.code}}
+</div>
+<div class="declaration">
+    <div class="declaration__info-title">
+        Информация:
+    </div>
+    <hr style="border: 1px solid #383636;">
+    <ul class="declaration__info">
+        <li class="table-row">
+            <div class="col-1">Тип заявления:</div>
+            <div class="col-2"><span class="decl_type">{{declaration.declaration_type}}</span> </div>
+            <div class="col-3"></div>
+        </li>
+        <li class="table-row">
+            <div class="col-1">Статус:</div>
+            <div class="col-2">
+                <span *ngIf="declaration.status === 'finished'" class="questionary__status-finished"></span>
+                <span *ngIf="declaration.status === 'finished'"> обработано</span>
+
+                <span *ngIf="declaration.status === 'pending'" class="questionary__status-pending"></span>
+                <span *ngIf="declaration.status === 'pending'"> обрабатывается</span>
+
+                <span *ngIf="declaration.status === 'waiting'" class="questionary__status-waiting"></span>
+                <span *ngIf="declaration.status === 'waiting'"> ждёт обработки</span>
+            </div>
+            <div class="col-3"></div>
+        </li>
+        <li class="table-row">
+            <div class="col-1">Дата подачи:</div>
+            <div class="col-2">{{declaration.date_submission}}</div>
+            <div class="col-3"></div>
+        </li>
+        <li class="table-row">
+            <div class="col-1">Дата приянтия:</div>
+            <div class="col-2">{{declaration.date_submission}}</div>
+            <div class="col-3"></div>
+        </li>
+        <li class="table-row">
+            <div class="col-1">Код пользователя:</div>
+            <div class="col-2">{{declaration.code_user}}</div>
+            <div class="col-3"></div>
+        </li>
+        <li class="table-row">
+            <div class="col-1">ФИО:</div>
+            <div class="col-2">{{declaration.fio}}</div>
+            <div class="col-3"></div>
+        </li>
+        <li class="table-row">
+            <div class="col-1">Сотрудник:</div>
+            <div class="col-2">.</div>
+            <div class="col-3"></div>
+        </li>
+    </ul>
+    <div class="declaration__operations">
+        <div style="background-color: #3CB5BB; color: #fff;" class="declaration__operation">
+            Взять на рассмотрение
+        </div>
+        <div class="declaration__operation">
+            Открыть заявление
+        </div>
+        <div class="declaration__operation">
+            Все файлы заявления
+        </div>
+    </div>
+    <hr style="border: 1px solid #383636; filter: blur(3px);">
+    <div class="declaration__agree-btn">
+    <img style="float: left;" src="../../../assets/nurse/agree_note.svg" alt=""> 
+    Согласие на обработку перс.данных</div>
+</div>
+<div class="comments">
+    <div class="comments__title">
+        Написать пациенту:
+    </div>
+    <hr class="comments__hr">
+    <span style="color: #817B7B;">Нет комментариев</span>
+    <input class="comments__add-field" placeholder="Ваш комментарий..." type="text">
+    <div class="comments__add-btn">Отправить</div>
+</div>

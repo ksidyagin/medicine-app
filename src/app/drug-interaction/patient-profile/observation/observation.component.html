@@ -1,0 +1,141 @@
+<div class="main__info">
+<h2 class="main__title">Наблюдение за пациентом</h2>
+<div class="observation__toplist">
+    <div class="drug__patient">
+        <h3 class="drug__patient-title">Пациент:</h3>
+        <p class="drug__patient-name">Иванов И.С.</p>
+    </div>
+
+    <div class="drug__patient">
+        <h3 class="drug__patient-title">Текущий диагноз:</h3>
+        <p class="drug__patient-name">Ангина</p>
+    </div>
+
+    <div class="drug__patient">
+        <h3 class="drug__patient-title">Болеет:</h3>
+        <p class="drug__patient-name">4 день</p>
+    </div>
+
+    <div class="observation__main">
+        <h3 class="observation__main-title">Новые данные 15.04.2021</h3>
+
+        <div class="observation__main-list">
+            <div class="observation__list-item">
+                <p class="observation__list-title">Симптомы</p>
+                <div class="observation__list-block">
+                    <p>Осиплость голоса</p>
+                    <p>Воспаление лимфоузлов</p>
+                    <p>Головокружение</p>
+                </div>
+            </div>
+
+            <div class="observation__list-item">
+                <p class="observation__list-title">Новые симптомы</p>
+                <div class="observation__list-block">
+                    <p>Головная боль</p>
+                    <p>Ломота и слабость в теле</p>
+                </div>
+            </div>
+
+            <div class="observation__list-item">
+                <p class="observation__list-title">Самочувствие</p>
+                <div class="observation__listtwo">
+                    <div class="observation__listtwo-item">
+                        <p class="observation__listtwo-text">Воспаление лимфоузлов</p>
+                        <p class="observation__listtwo-number">1</p>
+                        <p class="observation__listtwo-number">2</p>
+                        <p class="observation__listtwo-number">3</p>
+                        <p class="observation__listtwo-number observation__listtwo-number-active">4</p>
+                        <p class="observation__listtwo-number">5</p>
+                        <p class="observation__listtwo-number">6</p>
+                        <p class="observation__listtwo-number">7</p>
+                        <p class="observation__listtwo-number">8</p>
+                        <p class="observation__listtwo-number">9</p>
+                        <p class="observation__listtwo-number">10</p>
+                    </div>
+
+                    <div class="observation__listtwo-item">
+                        <p class="observation__listtwo-text">Головокружения</p>
+                        <p class="observation__listtwo-number">1</p>
+                        <p class="observation__listtwo-number">2</p>
+                        <p class="observation__listtwo-number">3</p>
+                        <p class="observation__listtwo-number">4</p>
+                        <p class="observation__listtwo-number">5</p>
+                        <p class="observation__listtwo-number observation__listtwo-number-active">6</p>
+                        <p class="observation__listtwo-number">7</p>
+                        <p class="observation__listtwo-number">8</p>
+                        <p class="observation__listtwo-number">9</p>
+                        <p class="observation__listtwo-number">10</p>
+                    </div>
+
+                    <div class="observation__listtwo-item">
+                        <p class="observation__listtwo-text">Головная боль</p>
+                        <p class="observation__listtwo-number">1</p>
+                        <p class="observation__listtwo-number">2</p>
+                        <p class="observation__listtwo-number">3</p>
+                        <p class="observation__listtwo-number">4</p>
+                        <p class="observation__listtwo-number">5</p>
+                        <p class="observation__listtwo-number">6</p>
+                        <p class="observation__listtwo-number observation__listtwo-number-active">7</p>
+                        <p class="observation__listtwo-number">8</p>
+                        <p class="observation__listtwo-number">9</p>
+                        <p class="observation__listtwo-number">10</p>
+
+                    </div>
+
+                    <div class="observation__listtwo-item">
+                        <p class="observation__listtwo-text">Слабость в теле</p>
+                        <p class="observation__listtwo-number">1</p>
+                        <p class="observation__listtwo-number">2</p>
+                        <p class="observation__listtwo-number observation__listtwo-number-active">3</p>
+                        <p class="observation__listtwo-number">4</p>
+                        <p class="observation__listtwo-number">5</p>
+                        <p class="observation__listtwo-number">6</p>
+                        <p class="observation__listtwo-number">7</p>
+                        <p class="observation__listtwo-number">8</p>
+                        <p class="observation__listtwo-number">9</p>
+                        <p class="observation__listtwo-number">10</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="observation__list-item">
+                <p class="observation__list-title">Жалобы пациента</p>
+                <div class="observation__list-block">
+                    <p>Чувствую себя удовлетворительно, температура поднялась сегодня до 38.6</p>
+                </div>
+            </div>
+
+            <div class="observation__footer">
+                <a href="" class="observation__footer-link">Написать пациенту</a>
+                <a href="" class="observation__footer-link">Посмотреть анкету</a>
+                <a href="" class="observation__footer-link" [routerLink]="['', 'medical-card-drug-interaction', 'my-map']" routerLinkActive="active">Медицинская карта</a>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="obs-title">Динамика заболевания</h3>
+
+    <!-- График -->
+
+    <h3 class="obs-title">Побочные эффекты от лекарств</h3>
+
+    <ul class="sideeffects__list">
+        <li class="sideeffects__list-item">
+            <p class="sideeffects__list-text">Головокружение и шум в ушах</p>
+            <p class="sideeffects__list-medicament">Аспирин</p>
+
+            <!-- пустое, для красного/зеленого... -->
+            <div class="sideeffects__list-check"></div>
+        </li>
+
+        <li class="sideeffects__list-item">
+            <p class="sideeffects__list-text"> боли в животе</p>
+            <p class="sideeffects__list-medicament">Аспирин</p>
+
+            <!-- пустое, для красного/зеленого... -->
+            <div class="sideeffects__list-check"></div>
+        </li>
+    </ul>
+</div>
+</div>

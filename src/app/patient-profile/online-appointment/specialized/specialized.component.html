@@ -1,0 +1,562 @@
+<div class="account">
+  <div class="account__wrapper">
+    <h2 class="profile-title">Анкетирование</h2>
+
+    <div class="questioning__wrapper">
+
+      <div class="questioning__inner">
+        <h3 class="questioning__title">Предлагаем ответить на следующие вопросы:</h3>
+
+        <ul class="questioning__list">
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">1</p>
+              <p class="questioning__list-text">Беспокоят ли Вас боли или дискомфорт за грудиной или в левой половине грудной клетки?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-1" (click)="specialized__que_one_yes()">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-1" (click)="specialized__que_one_no()">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">2</p>
+              <p class="questioning__list-text">Беспокоит ли Вас одышка или чувство нехватки воздуха?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-2" (click)="specialized__que_two_yes()">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-2" (click)="specialized__que_two_no()">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">3</p>
+              <p class="questioning__list-text">Беспокоят ли Вас отеки ног?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-3" (click)="specialized__que_three_yes()">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-3" (click)="specialized__que_three_no()">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">4</p>
+              <p class="questioning__list-text">Беспокоит ли Вас ощущение учащенного или нерегулярного сердцебиения?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-4" (click)="specialized__que_four_yes()">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-4" (click)="specialized__que_four_no()">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">5</p>
+              <p class="questioning__list-text">Контролируете ли Вы свое артериальное давление?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-5" (click)="specialized__que_five_yes()">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-5" (click)="specialized__que_five_no()">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">6</p>
+              <p class="questioning__list-text">У кровных родственников (родители, братья, сестры) есть заболевания сердечно - сосудистой системы?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-6">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-6">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">7</p>
+              <p class="questioning__list-text">
+                Если Вы уже имеете какое — либо сердечно — сосудистое заболевание (ИБС, стенокардия, перенесенный инфаркт миокарда, хроническая сердечная недостаточность, артериальная гипертензия, аритмия), были ли Вы на приеме врача в течение полугода?
+              </p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-7">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-7">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">8</p>
+              <p class="questioning__list-text">
+                Если Вы уже имеете какое — либо сердечно — сосудистое заболевание (ИБС, стенокардия, перенесенный инфаркт миокарда, хроническая сердечная недостаточность, артериальная гипертензия, аритмия), регулярно ли вы принимаете назначенные Вам лекарственные препараты?
+              </p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-8">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-8">
+              </div>
+            </div>
+          </li>
+          <hr>
+        </ul>
+
+        <ul class="questioning__list" *ngIf="que_one===true">
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">9</p>
+              <p class="questioning__list-text">Боли носят приступообразный характер?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-9">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-9">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">10</p>
+              <p class="questioning__list-text">По своему характеру боли сжимающие или давящие?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-10">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-10">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">11</p>
+              <p class="questioning__list-text">Приступы болей провоцируются физической нагрузкой (быстрая ходьба, ходьба по лестнице, в гору)?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-11">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-11">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">12</p>
+              <p class="questioning__list-text">Продолжительность приступов не более 15 мин?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-12">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-12">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">13</p>
+              <p class="questioning__list-text">Боли проходят самостоятельно после прекращения физической нагрузки, либо после приема нитропрепаратов?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-13">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-13">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">14</p>
+              <p class="questioning__list-text">Контролируете ли Вы свой уровень холестерина ЛПНП?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-14">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-14">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">15</p>
+              <p class="questioning__list-text">
+                Приступы болей за грудиной или в левой половине грудной клетки появились впервые?
+              </p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-15">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-15">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">16</p>
+              <p class="questioning__list-text">
+                Приступы болей за грудиной или в левой половине грудной клетки стали более интенсивными, частыми или продолжительными в течение последней недели?
+              </p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-16">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-16">
+              </div>
+            </div>
+          </li>
+          <hr>
+        </ul>
+
+        <ul class="questioning__list" *ngIf="que_two===true">
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">17</p>
+              <p class="questioning__list-text">Одышка или чувство нехватки воздуха появляется в покое (лежа или сидя)?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-17">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-17">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">18</p>
+              <p class="questioning__list-text">Одышка или чувство нехватки воздуха появляется пр бытовых (в пределах квартиры) физических нагрузках?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-18">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-18">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">19</p>
+              <p class="questioning__list-text">Одышка или чувство нехватки воздуха появляется при умеренных физических нагрузках (ходьба по ровному месту, подъем на 1 этаж)?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-19">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-19">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">2021</p>
+              <p class="questioning__list-text">Одышка появилась впервые или нарастает в течение последней недели?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-2021" (click)="specialized__que_yes()">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-2021" (click)="specialized__que_no()">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">21</p>
+              <p class="questioning__list-text">У Вас диагностирована хроническая обструктивная болезнь легких (ХОБЛ)?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-21" (click)="specialized__que_yes()">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-21" (click)="specialized__que_no()">
+              </div>
+            </div>
+          </li>
+          <hr>
+        </ul>
+
+        <ul class="questioning__list" *ngIf="que_three===true">
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">22</p>
+              <p class="questioning__list-text">Вы проводили обследование вен нижних конечностей?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-22">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-22">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+        </ul>
+
+        <ul class="questioning__list" *ngIf="que_four===true">
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">23</p>
+              <p class="questioning__list-text">Вы оценивали состояние щитовидной железы?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-23">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-23">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">24</p>
+              <p class="questioning__list-text">Вас беспокоят приступы головокружения или резкой слабости?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-24">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-24">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">25</p>
+              <p class="questioning__list-text">Учащенное сердцебиение или перебои в работе сердца появились впервые или усилились в течение недели?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-25">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-25">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+        </ul>
+
+        <ul class="questioning__list" *ngIf="que_five===true">
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">26</p>
+              <p class="questioning__list-text">Ваше артериальное давление не превышает 130/80 мм.рт.ст.?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-26">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-26">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+        </ul>
+
+        <ul class="questioning__list" *ngIf="que_five===false">
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">27</p>
+              <p class="questioning__list-text">У Вас раньше регистрировали артериальную гипертензию?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-27">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-27">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">28</p>
+              <p class="questioning__list-text">Если Вам были рекомендованы мероприятия по изменению образа жизни, Вы их придерживаетесь?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-28">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-28">
+              </div>
+            </div>
+          </li>
+          <hr>
+
+          <li class="question__list-item">
+            <div class="questioning__list-que">
+              <p class="questioning__list-number">29</p>
+              <p class="questioning__list-text">Если Вам были рекомендованы препараты для снижения артериального давления, Вы их регулярно принимаете?</p>
+            </div>
+            <div class="questioning__list-answers">
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Да</p>
+                <input class="questioning__list-input" type="radio" name="que-29">
+              </div>
+              <div class="questioning__list-answer">
+                <p class="questioning__list-answer-text">Нет</p>
+                <input class="questioning__list-input" type="radio" name="que-29">
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <a class="questioning__link" [routerLink]="['', 'online-appointment-patient','online-step-result']" routerLinkActive="active">Далее</a>
+    </div>
+
+  </div>
+</div>

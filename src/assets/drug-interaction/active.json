@@ -1,0 +1,10 @@
+{
+    "data": [
+        { "name": "Адапален", "code": "Adapalen" },
+        { "name": "Мелатонин", "code": "Melatonin" },
+        { "name": "Нифуроксазид", "code": "Nifuroxazide" },
+        { "name": "Цитиколин", "code": "Citicoline" },
+        { "name": "Пиритион цинк", "code": "Zinc-pyrithione" },
+        { "name": "Панкреатин", "code": "Pancreatin" }
+    ]
+}

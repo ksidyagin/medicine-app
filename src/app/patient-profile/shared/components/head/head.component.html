@@ -1,0 +1,80 @@
+<header class="header" id="top">
+
+  <div class="header-search">
+    <div class="header-search__item">
+      <input class="header-search__input" placeholder="Что вы ищете?" type="text">
+      <button class="header-search__btn">
+        <img src="../../../../../assets/drug-interaction/pics/header-search.svg" alt="">Найти
+      </button>
+    </div>
+
+    <div class="header-search__item">
+      <div class="header-search__city">
+        <img src="../../../../../assets/drug-interaction/pics/header-city.svg" alt=""> Нижний Новгород
+      </div>
+      <div class="header-search__clinic">
+        <img src="../../../../../assets/drug-interaction/pics/header-clinic.svg"> Поликлиника №4
+        <!-- <p-dropdown [options]="clinics" onclick="" [(ngModel)]="selectedClinicCode" optionLabel="name" optionValue="code" placeholder="Выберите поликлинику"></p-dropdown> -->
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="header-nav">
+    <a class="logo" [routerLink]="['', 'main']" id="header-logo" routerLinkActive="active">
+      <img class="logo-img" src="../../../../../assets/drug-interaction/pics/logo.png" alt="">
+    </a>
+
+    <div class="menu__list-item">
+      <div class="dropdown">
+        <a class="dropbtn">Услуги</a>
+        <div class="dropdown-content">
+          <a [routerLink]="['', 'online-appointment-patient','online-step-one']">Онлайн-запись</a>
+          <a [routerLink]="['', 'interrogation']">Анкетирование</a>
+          <a [routerLink]="['', 'reference']">Справки</a>
+          <a [routerLink]="['', 'spa-card']">Сан-курортная карта</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="menu__list-item"  routerLinkActive="active">
+      <a class="menu__list-link" [routerLink]="['', 'drug']">Лекарственное взаимодействие</a>
+    </div>
+
+    <div class="menu__list-item"  routerLinkActive="active">
+      <a class="menu__list-link" [routerLink]="['', 'my-notes']">Мои записи</a>
+    </div>
+
+    <div class="menu__list-item"  routerLinkActive="active">
+      <a class="menu__list-link" [routerLink]="['', 'my-recipes']">Мои рецепты</a>
+    </div>
+    <div class="menu__list-item">
+      <a class="menu__list-link"><b>Роль</b>
+        <br>
+        Пациент
+      </a>
+    </div>
+
+    <div class="menu__list-item" id="header-nav7">
+      <img class="menu__list-user" src="../../../../../assets/drug-interaction/pics/header-profile.svg" width="44px" height="44px" alt="">
+      <div class="dropdown">
+        <a class="dropbtn" [routerLink]="['',  'account']" routerLinkActive="active">{{user.user.patient.last_name}} {{name}}.{{patronymic}}.</a>
+        <div class="dropdown-content">
+          <a [routerLink]="['', 'account']">Учетная запись</a>
+          <a [routerLink]="['', 'personal-information']">Персональные данные</a>
+          <a [routerLink]="['', 'notifications']">Уведомления</a>
+          <a>Инструкции по сервису</a>
+          <hr style="margin: -5px 0;">
+          <a >Выйти</a>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</header>
+

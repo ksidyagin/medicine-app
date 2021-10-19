@@ -1,0 +1,477 @@
+<div class="main__info">
+    <div class="container">
+        <h2 class="main__title">Лекарственное взаимодействие</h2>
+
+        <div class="drug__patient">
+            <h3 class="drug__patient-title">Пациент:</h3>
+            <p class="drug__patient-name">{{fio}}</p>
+        </div>
+
+        <div class="drug__add">
+            <p-autoComplete [(ngModel)]="medication" [suggestions]="filteredDrugNames" (completeMethod)="filterDrugName($event)" [minLength]="1" [dropdown]="true" style="margin-right:20px;width: 500px;height: 50px;">
+            </p-autoComplete>
+            <button class="drug__add-btn" (click)="addMedication()">Добавить</button>
+            <!-- <p-progressSpinner [style]="{width: '50px', height: '50px'}" styleClass="custom-spinner" 
+            strokeWidth="8" fill="#EEEEEE" animationDuration=".5s" >
+            </p-progressSpinner> -->
+        </div>
+
+        <div class="drug__add-check">
+            <br>
+            <input (click)="is_food_components()" class="drug__add-checkbox" type="checkbox" name="" id="">
+            <p class="drug__add-text">компонентами пищи</p>
+            <input (click)="is_spirt()" class="drug__add-checkbox" type="checkbox" name="" id="">
+            <p class="drug__add-text">этиловым спиртом</p>
+            <input (click)="is_nikotin()" class="drug__add-checkbox" type="checkbox" name="smoke" id="">
+            <p class="drug__add-text">компонентами табачного дыма</p>
+        </div>
+
+        <div class="drug__wrapper">
+            <ul class="drug__list">
+                <div *ngFor="let med of drug_cards">
+                    <li class="drug__list-item">
+                        <div class="drug__main">
+                            <div class="drug__list-wrapper">
+                                <h4 class="drug__list-title">{{med.name}}</h4>
+
+                                <h5 (click)="showInstruction(med)" class="drug__list-instruction">Инструкция</h5>
+                                <!-- Dialog -->
+                                <p-dialog header="Инструкция к препарату" [(visible)]="instructionIsOpened" [style]="{width: '1350px'}" [baseZIndex]="10000">
+                                    <div  class="main__info">
+
+                                        <div class="main__wrapper">
+                                            <h2>Фармакологическое действие</h2>
+                                            <p> {{med.pharmachologiceffect}} </p>
+                                           
+                                            <div class="block" id="kinetics">
+                                                <h2 class="block-head">Фармакокинетика</h2>
+                                                <div class="block-content">{{med.pharmacokinetics}}</div>
+                                            </div>
+                                            <div class="block" id="indication">
+                                                <h2 class="block-head">	Показания активных веществ препарата</h2>
+                                                <div class="block-content">
+                                                    <p>{{med.indicationofactivesubstances}}</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="block" id="dosage">
+                                                <h2 class="block-head">Режим дозирования</h2>
+                                                <div class="block-content">
+                                                    <p>{{med.dosingregimen}}</p>
+                                                </div>
+                                            </div>
+                                    
+                                       
+                                            <div class="block" id="side_effects">
+                                                <h2 class="block-head">Побочное действие</h2>
+                                                <div class="block-content">
+                                                    <p>{{med.sideeffect}}</p>
+
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="block" id="contra">
+                                                <h2 class="block-head">Противопоказания к применению</h2>
+                                                <div class="block-content">
+                                                    {{med.indicationsofthedrug}}
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="block" id="preg_lact">
+                                                <h2 class="block-head">Применение при беременности и кормлении грудью</h2>
+                                                <div class="block-content">
+                                                    {{med.applicationduringpregnancyandlactation}}
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="block" id="hepato">
+                                                <h2 class="block-head">Применение при нарушениях функции печени</h2>
+                                                <div class="block-content">
+                                                    <p>{{med.applicationincaseofimpairedliverfunction}}</p>
+                                                </div>
+                                            </div>
+                                    
+                                    
+                                            <div class="block" id="renal">
+                                                <h2 class="block-head">Применение при нарушениях функции почек</h2>
+                                                <div class="block-content">
+                                                    <p>{{med.applicationforimpairedrenalfunction}}</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="block" id="child">
+                                                <h2 class="block-head">Применение у детей</h2>
+                                                <div class="block-content">
+                                                    <p>{{med.applicationinchildren}}</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="block" id="old">
+                                                <h2 class="block-head">Применение у пожилых пациентов</h2>
+                                                <div class="block-content">
+                                                    <p>{{med.useinelderlypatients}}</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="block" id="special">
+                                                <h2 class="block-head">Особые указания</h2>
+                                                <div class="block-content">
+                                                    <p>{{med.specialinstructions}}</p>
+                                                </div>
+                                            </div>
+                                    
+                                    
+                                            <div class="block" id="over_dosage">
+                                                <h2 class="block-head">Передозировка</h2>
+                                                <div class="block-content">
+                                                    <p>{{med.overdose}}</p>
+                                                </div>
+                                            </div>
+                                    
+                                    
+                                            <div class="block" id="interaction">
+                                                <h2 class="block-head">Лекарственное взаимодействие</h2>
+                                                <div class="block-content">
+                                                    <p>{{med.druginteraction}}</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="block" id="storage_conditions">
+                                                <h2 class="block-head">
+                                                    Условия хранения препарата {{med.name}}
+                                                </h2>
+                                                <div class="block-content">
+                                                    <p>{{med.storageconditions}}</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="block">
+                                                <h2 class="block-head">
+                                                    Срок годности:
+                                                </h2>
+                                                <div class="block-content">
+                                                    <p>{{med.shelflife}}</p>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="block" id="pharm">
+                                                <h2 class="block-head">Условия реализации</h2>
+                                                <div class="block-content">
+                                                    <p>{{med.termsofsale}}</p>
+                                                </div>
+                                            </div>
+                                   
+                                        </div>
+                                    </div>
+                                    <ng-template pTemplate="footer">
+                                        <p-button  (click)="instructionIsOpened=false"  styleClass="p-button-text"></p-button>
+                                    </ng-template>
+                                </p-dialog>
+
+                                <!-- Dialog -->
+
+                                <p class="drug__list-text">
+                                    <span class="drug__list-underline">Действующие вещества (МНН):</span> <span *ngFor="let item of med.activestuff"> {{item}}</span>
+                                </p>
+
+                                <p class="drug__list-text">
+                                    <span class="drug__list-underline">Группа:</span> {{med.clinicgroup}}
+                                </p>
+
+                               <!-- <p class="drug__list-text">
+                                    <span class="drug__list-underline">Взаимодействует с:</span> этим и этим
+                                </p>-->
+
+
+                            </div>
+
+                            <div class="drug__list-wrapper">
+                                <div *ngIf="med.contraindicated != ''" class="drug__list-counterlist">
+                                    <span class="drug__counterlist-title">Противопоказан</span>
+                                    <div class="drug__counterlist-imgs">
+                                        <img *ngIf="med.contraindicated.includes('c')" class="drug__list-img" src="../../../assets/pics/дети.png" alt="">
+                                        <img *ngIf="med.contraindicated.includes('l')" class="drug__list-img" src="../../../assets/pics/лактация.png" alt="">
+                                        <img *ngIf="med.contraindicated.includes('n')" class="drug__list-img" src="../../../assets/pics/почки.png" alt="">
+                                        <img *ngIf="med.contraindicated.includes('o')" class="drug__list-img" src="../../../assets/pics/old-man_1.svg" alt="">
+                                        <img *ngIf="med.contraindicated.includes('p')" class="drug__list-img" src="../../../assets/pics/беременная ж.png" alt="">
+                                        <img *ngIf="med.contraindicated.includes('r')" class="drug__list-img" src="../../../assets/pics/печень.png" alt="">
+                                    </div>
+                                </div>
+                                <div *ngIf="med.carefully != ''" class="drug__list-carefullylist">
+                                    <span class="drug__carefullylist-title">С осторожностью</span>
+                                    <div class="drug__carefullylist-imgs">
+                                        <img *ngIf="med.carefully.includes('c')" class="drug__list-img" src="../../../assets/pics/дети.png" alt="">
+                                        <img *ngIf="med.carefully.includes('l')" class="drug__list-img" src="../../../assets/pics/лактация.png" alt="">
+                                        <img *ngIf="med.carefully.includes('n')" class="drug__list-img" src="../../../assets/pics/почки.png" alt="">
+                                        <img *ngIf="med.carefully.includes('o')" class="drug__list-img" src="../../../assets/pics/old-man_1.svg" alt="">
+                                        <img *ngIf="med.carefully.includes('p')" class="drug__list-img" src="../../../assets/pics/беременная ж.png" alt="">
+                                        <img *ngIf="med.carefully.includes('r')" class="drug__list-img" src="../../../assets/pics/печень.png" alt="">
+                                    </div>
+                                </div>
+                                <div *ngIf="med.allowed != ''" class="drug__list-carefullylist">
+                                    <span style="background: #00e94e; color:#2E573C;" class="drug__carefullylist-title">Разрешено</span>
+                                    <div class="drug__carefullylist-imgs">
+                                        <img *ngIf="med.allowed.includes('c')" class="drug__list-img" src="../../../assets/pics/дети.png" alt="">
+                                        <img *ngIf="med.allowed.includes('l')" class="drug__list-img" src="../../../assets/pics/лактация.png" alt="">
+                                        <img *ngIf="med.allowed.includes('n')" class="drug__list-img" src="../../../assets/pics/почки.png" alt="">
+                                        <img *ngIf="med.allowed.includes('o')" class="drug__list-img" src="../../../assets/pics/old-man_1.svg" alt="">
+                                        <img *ngIf="med.allowed.includes('p')" class="drug__list-img" src="../../../assets/pics/беременная ж.png" alt="">
+                                        <img *ngIf="med.allowed.includes('r')" class="drug__list-img" src="../../../assets/pics/печень.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button (click)="delMedication(med)" class="drug__list-remove">x</button>
+                        </div>
+
+                        <div class="drug__list-footer">
+                            <div *ngIf="med.interaction" class="drug__footer-item">
+
+                            
+                            <div *ngIf="med.interaction[0].nicotine.length > 0" class="drug__footer-item" >
+                                <img src="../../../assets/drug-interaction/pics/cigarrete.svg" alt="" class="drug__footer-img">
+                                <h4 class="drug__footer-title">С компонентами табачного дыма ....</h4>
+                                <div *ngFor="let nic of med.interaction[0].nicotine" class="drug__footer-table">
+                                    <div class="drug__footer-table-item">
+                                        <h5 class="drug__footer-table-title">Вещество</h5>
+                                        <div class="drug__footer-table-inneritem">{{nic.molecule2}}</div>
+                                    </div>
+                                    <div class="drug__footer-table-item">
+                                        <h5 class="drug__footer-table-title">Взаимодействие</h5>
+                                        <div class="drug__footer-table-inneritem">{{nic.opisanie}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="drug__footer-item" *ngIf="med.interaction">
+                                <div *ngIf="med.interaction[0].alcohol.length > 0" class="drug__footer-item" >
+                                    <img src="../../../assets/drug-interaction/pics/wine.svg" alt="" class="drug__footer-img">
+                                    <h4 class="drug__footer-title">С этиловым спиртом ....</h4>
+                                    <div *ngFor="let alc of med.interaction[0].alcohol" class="drug__footer-table">
+                                        <div class="drug__footer-table-item">
+                                            <h5 class="drug__footer-table-title">Вещество</h5>
+                                            <div class="drug__footer-table-inneritem">{{alc.stuff2}}</div>
+                                        </div>
+                                        <div class="drug__footer-table-item">
+                                            <h5 class="drug__footer-table-title">Взаимодействие</h5>
+                                            <div class="drug__footer-table-inneritem">{{alc.descr}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="drug__footer-item" *ngIf="med.interaction">
+                                <div *ngIf="med.interaction[0].food.length > 0" class="drug__footer-item" >
+                                    <img src="../../../assets/drug-interaction/pics/tray.svg" alt="" class="drug__footer-img">
+                                    <h4 class="drug__footer-title">С продуктами питания ....</h4>
+                                    <div *ngFor="let food of med.interaction[0].food" class="drug__footer-table">
+                                        <div class="drug__footer-table-item">
+                                            <h5 class="drug__footer-table-title">Название пищи</h5>
+                                            <div class="drug__footer-table-inneritem">{{food.food}}</div>
+                                        </div>
+                                        <div class="drug__footer-table-item">
+                                            <h5 class="drug__footer-table-title">Взаимодействие</h5>
+                                            <div class="drug__footer-table-inneritem">{{food.results}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <p class="drug__footer-link" (click)="compatibility__func(med)">Совместимость</p>
+                            <div *ngIf="med.compatibility">
+                                <div class="drug__footer-item">
+                                    <img src="../../../assets/pics/hospital-bed.svg" alt="" class="drug__footer-img">
+                                    <h4 class="drug__footer-title">Хронические заболевания</h4>
+                                    <div class="drug__footer-table">
+                                        <div *ngFor="let item of med.compatibilities" class="drug__footer-table-item">
+                                            <h5 class="drug__footer-table-title">Противопоказан:</h5>
+                                            <div class="drug__footer-table-inneritem">{{item}}</div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+                <button class="drug__list-btn" (click)="checkInfo()">Проверить</button>
+            </ul>
+
+            <div class="drug__info" *ngIf="info===true">
+                <div *ngFor="let vzaim of vzaimod">
+                    <div *ngIf="vzaim.is_reaction" class="drug__info-item">
+                        <h3 class="drug__info-title" >Препарат {{vzaim.molecule1}} взаимодействует с препаратом 
+                            {{vzaim.molecule2}}
+                        </h3>
+                        <p class="drug__info-text">{{vzaim.opisanie}}</p>
+                        <p class="drug__info-text-bold">
+                            <span class="drug__info-text-title">Уровень риска:</span>
+                            <span *ngIf="vzaim.seriostype === '1'" class="drug__info-text-status-green">Слабо выраженное</span>
+                            <span *ngIf="vzaim.seriostype === '2'" class="drug__info-text-status-yellow">Умеренно выраженное</span>
+                            <span *ngIf="vzaim.seriostype === '3'" class="drug__info-text-status-orange">Требующее осторожности</span>
+                            <span *ngIf="vzaim.seriostype === '4'" class="drug__info-text-status-red">Тяжёлое</span>
+                        </p>
+                        <p class="drug__info-text-bold">
+                            <span class="drug__info-text-title">Частота встречаемости:</span>
+                            <span *ngIf="vzaim.dostovernost === '1'" class="drug__info-text-status-green">Не установлено</span>
+                            <span *ngIf="vzaim.dostovernost === '2'" class="drug__info-text-status-green">Редкие</span>
+                            <span *ngIf="vzaim.dostovernost === '3'" class="drug__info-text-status-orange">Частые</span>
+                            <span *ngIf="vzaim.dostovernost === '4'" class="drug__info-text-status-red">Хорошо подтвержденные</span>
+                        </p>
+                    </div>
+                    <div *ngIf="!vzaim.is_reaction" class="drug__info-item">
+                        <h3 class="drug__info-title" >Препарат {{vzaim.molecule1}} не взаимодействует с препаратом 
+                            {{vzaim.molecule2}}
+                        </h3>
+                    </div>
+                </div>
+                <a class="drug__info-link" (click)="footerInteraction()">Посмотреть другие </a>
+
+                <!-- <div class="drug__info-item">
+                    <p class="drug__info-text">У выбранных Вами препаратов есть аналоги (дженерики). </p>
+                    <a class="drug__info-link" (click)="footerGeneric()">Посмотреть</a>
+                </div> -->
+            </div>
+
+        </div>
+
+       
+
+        <div class="drag__item" *ngIf="footer==='interaction'">
+            <h2 class="main__title">Рекомендованные препараты:</h2>
+
+            <div class="store__list-mini">
+                <div class="store__list-item">
+                    <p class="store__list-title">Действующее вещество:</p>
+                    <p-autoComplete class="store__autocomplete" [(ngModel)]="selectedActiveAdvanced" [suggestions]="filteredActives" (completeMethod)="filterActive($event)" [dropdown]="true">
+                        <ng-template let-active pTemplate="item">
+                            <div class="country-item">
+                                <div>{{active}}</div>
+                            </div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+
+                <div class="store__list-item">
+                    <p class="store__list-title">Клинико-фармалогическая группа:</p>
+                    <p-autoComplete class="store__autocomplete" [(ngModel)]="selectedGroupAdvanced" [suggestions]="filteredGroups" (completeMethod)="filterGroup($event)" [dropdown]="true">
+                        <ng-template let-group pTemplate="item">
+                            <div class="country-item">
+                                <div>{{group}}</div>
+                            </div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+
+                <div class="store__list-item">
+                    <p class="store__list-title">Фармако-терапевтическая группа:</p>
+                    <p-autoComplete class="store__autocomplete" [(ngModel)]="selectedEditionAdvanced" [suggestions]="filteredEditions" (completeMethod)="filterEdition($event)" [dropdown]="true">
+                        <ng-template let-edition pTemplate="item">
+                            <div class="country-item">
+                                <div>{{edition}}</div>
+                            </div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+
+            </div>
+
+            <button class="store-btn" (click)="searchMedicalCards()" type="submit">Поиск</button>
+            <div *ngFor="let card of medicalCards">
+                <div>
+                    <div class="store__item">
+
+                        <div class="store__item-info">
+                            <h4 class="store__item-title">{{card.name}}</h4>
+
+                            <a class="store__item-instruction">Инструкция к препарату</a>
+
+                            <p class="store__item-text">
+                                <span class="store__item-underline">Действующее вещество (МНН): {{card.activestuff[0]}}</span>
+                            </p>
+
+                            <p class="store__item-text">
+                                <span class="store__item-underline">Группа: {{card.farmakogroup}}</span>
+                            </p>
+
+                            <a class="store__item-link" (click)="checkInteraction(card)">Проверить взаимодействие</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="drag__item" *ngIf="footer==='generic'">
+            <h2 class="main__title">Дженерики:</h2>
+
+            <!--<div class="store__list-mini">
+          <div class="store__list-item">
+            <p class="store__list-title">Действующее вещество:</p>
+            <p-autoComplete class="store__autocomplete" [(ngModel)]="selectedActiveAdvanced" [suggestions]="filteredActives" (completeMethod)="filterActive($event)" field="name" [dropdown]="true">
+              <ng-template let-active pTemplate="item">
+                <div class="country-item">
+                  <div>{{active.name}}</div>
+                </div>
+              </ng-template>
+            </p-autoComplete>
+          </div>
+
+          <div class="store__list-item">
+            <p class="store__list-title">Группа:</p>
+            <p-autoComplete class="store__autocomplete" [(ngModel)]="selectedGroupAdvanced" [suggestions]="filteredGroups" (completeMethod)="filterGroup($event)" field="name" [dropdown]="true">
+              <ng-template let-group pTemplate="item">
+                <div class="country-item">
+                  <div>{{group.name}}</div>
+                </div>
+              </ng-template>
+            </p-autoComplete>
+          </div>
+
+          <div class="store__list-item">
+            <p class="store__list-title">Форма выпуска:</p>
+            <p-autoComplete class="store__autocomplete" [(ngModel)]="selectedEditionAdvanced" [suggestions]="filteredEditions" (completeMethod)="filterEdition($event)" field="name" [dropdown]="true">
+              <ng-template let-edition pTemplate="item">
+                <div class="country-item">
+                  <div>{{edition.name}}</div>
+                </div>
+              </ng-template>
+            </p-autoComplete>
+          </div>
+        </div>
+
+        <button class="store-btn" type="submit">Поиск</button>-->
+
+
+            <div *ngFor="let card of mygenerics">
+                <div *ngFor="let g of card">
+                    <div class="store__item">
+                        <div class="store__item-info">
+                            <h4 class="store__item-title">{{g.salename}}</h4>
+
+                            <a class="store__item-instruction">Инструкция к препарату</a>
+
+                            <!--<p class="store__item-text">
+              <span class="store__item-underline">Действующее вещество (МНН):</span>
+            </p>
+
+            <p class="store__item-text">
+              <span class="store__item-underline">Группа:</span>
+            </p>-->
+
+                            <a class="store__item-link" >Проверить взаимодействие</a>
+
+                            <div class="store__item-generic">дженерик {{g.name}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="drug__show-btn">Посмотреть все</a>
+        </div>
+
+    </div>
+</div>

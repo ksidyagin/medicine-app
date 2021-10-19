@@ -1,0 +1,61 @@
+<div class="account">
+    <div class="account__wrapper">
+        <h2 class="profile-title">Анкета № 01-000001</h2>
+
+        <div class="worksheet__wrapper">
+            <h3 class="worksheet__title">Информация:</h3>
+            <hr>
+            <div class="worksheet__item">
+                <p class="worksheet__item-title">Тип заявления:</p>
+                <a class="worksheet__item-value worksheet__item-link" [routerLink]="['','profile', 'questioning-view']" routerLinkActive="active">Общий тест</a>
+            </div>
+
+            <div class="worksheet__item">
+                <p class="worksheet__item-title">Статус:</p>
+                <p class="worksheet__item-value">
+                    <span class="question__table-status-red"></span>ждет обработки
+                </p>
+            </div>
+
+            <div class="worksheet__item">
+                <p class="worksheet__item-title">Дата подачи:</p>
+                <p class="worksheet__item-value">12:56 19.08.21</p>
+            </div>
+
+            <div class="worksheet__item">
+                <p class="worksheet__item-title">Дата принятия:</p>
+                <p class="worksheet__item-value">12:56 19.08.21</p>
+            </div>
+
+            <div class="worksheet__item">
+                <p class="worksheet__item-title">Код пользователя:</p>
+                <p class="worksheet__item-value">01-01-0101</p>
+            </div>
+
+            <div class="worksheet__item">
+                <p class="worksheet__item-title">ФИО:</p>
+                <p class="worksheet__item-value">Иванов Иван Сергеевич</p>
+            </div>
+
+            <div class="worksheet__links">
+                <a class="worksheet__links-link" href="#">Отозавать анкету</a>
+                <a class="worksheet__links-link" href="#">Открыть анкету</a>
+                <a class="worksheet__links-link" href="#">Все файлы заявления</a>
+                <hr>
+            </div>
+
+            <a class="worksheet__link-agreement" href="">
+                <img class="worksheet__link-agreement-img" src="../../../assets/pics/san-card/pic_3.svg" alt=""> Согласие на обработку перс.данных</a>
+        </div>
+
+        <form class="worksheet__wrapper">
+            <h3 class="worksheet__title">Информация:</h3>
+            <hr>
+            <p class="worksheet__text">Нет комментариев</p>
+
+            <textarea class="worksheet__comment-input" name="comment" id="" cols="30" rows="2" placeholder="Ваш комментарий..."></textarea>
+
+            <a class="worksheet__comment-btn" href="#" type="submit">Отправить</a>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="sign">
+    <div class="container-log">
+        <div class="sign__wrapper">
+            <div class="sign__block">
+                <h2 class="sign__block-title">Введите свой действительный Email:</h2>
+                <form [formGroup]="emailForm" (ngSubmit)="onSubmitEmail()" class="sign__form">              
+                    <input formControlName="email" class="sign__form-input" type="email">
+                    <p class="form-error" *ngIf="emailForm.get('email').errors && emailForm.get('email').touched">
+                        Email обязателен</p>
+
+                    <button class="sign__form-btn" type="submit" [disabled]="emailForm.invalid">Далее</button>
+
+                    <p class="sign__form-login">
+                        Есть аккаунт?
+                        <span class="sign__form-reg" (click)="goToLogin()"> Войдите!</span>
+                    </p>
+
+                </form>
+                <br>
+                <form *ngIf="firstFormIsComplete" [formGroup]="codeForm" (ngSubmit)="onSubmitCode()" class="sign__form">              
+                    <h4 class="sign__form-title">Введите код:</h4>
+                    <input formControlName="password_code" class="sign__form-input" type="text">
+
+                    <button class="sign__form-btn" type="submit" [disabled]="codeForm.invalid">Подтвердить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

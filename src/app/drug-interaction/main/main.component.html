@@ -1,0 +1,241 @@
+<div class="main__info">
+    <div class="container">
+        <div class="main__wrapper">
+            <div class="main__btns">
+                <p-selectButton [options]="visitOptions" [(ngModel)]="value1" [ngModelOptions]="{standalone: true}" optionLabel="label" optionValue="value"></p-selectButton>
+            </div>
+
+            <div [formGroup]="mainForm" class="main__list" *ngIf="flagEvent()">
+                <div class="main__list-item">
+                    <p class="main__list-title">Фамилия:</p>
+                    <input class="main__list-input" type="title" formControlName="secondName">
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Имя:</p>
+                    <input class="main__list-input" type="title" formControlName="firstName">
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Отчество:</p>
+                    <input class="main__list-input" type="title" formControlName="patronymic">
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Возраст:</p>
+                    <input class="main__list-input main__list-input-little" type="number" formControlName="age" min="1">
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Пол</p>
+                    <p-autoComplete class="main__autocomplete-little" formControlName="gender" [suggestions]="filteredGenders" (completeMethod)="filterGender($event)" [dropdown]="true">
+                        <ng-template let-gender pTemplate="item">
+                            <div class="country-item">
+                                <div>{{gender}}</div>
+                            </div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Хронические заболевания:</p>
+
+
+                <p-autoComplete formControlName="chronic" [ngModelOptions]="{standalone: true}" [suggestions]="filteredChronics" (completeMethod)="filterChronic($event)" [dropdown]="true">
+                    <ng-template let-chronic pTemplate="item">
+                        <div class="country-item">
+                            <div>{{chronic}}</div>
+                        </div>
+                    </ng-template>
+                </p-autoComplete>
+
+                </div>
+
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Курение:</p>
+                    <div class="main__list-flex">
+                        <div class="main__list-radio">
+                            <input class="main__list-radio-input" type="radio" formControlName="smoking" value="yes" (click)="smokingCheked()">
+                            <span class="main__list-text">Да</span>
+                        </div>
+                        <div class="main__list-radio">
+                            <input class="main__list-radio-input" type="radio" formControlName="smoking" value="no" (click)="noSmokingCheked()">
+                            <span class="main__list-text">Нет</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__list-item" *ngIf="smoke===1">
+                    <p class="main__list-title">Количество выкуриваемых сигарет:</p>
+                    <input class="main__list-input main__list-input-little" type="number" formControlName="numberOfCigarettes" min="1">
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Употребление алкоголя:</p>
+                    <div class="main__list-flex">
+                        <div class="main__list-radio">
+                            <input class="main__list-radio-input" type="radio" formControlName="alcohol" value="yes">
+                            <span class="main__list-text">Да</span>
+                        </div>
+                        <div class="main__list-radio">
+                            <input class="main__list-radio-input" type="radio" formControlName="alcohol" value="no">
+                            <span class="main__list-text">Нет</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Беременность:</p>
+                    <div class="main__list-flex">
+                        <div class="main__list-radio">
+                            <input class="main__list-radio-input" type="radio" formControlName="pregnancy" value="yes" (click)="pregnancyCheked()">
+                            <span class="main__list-text">Да</span>
+                        </div>
+                        <div class="main__list-radio">
+                            <input class="main__list-radio-input" type="radio" formControlName="pregnancy" value="no" (click)="noPregnancyCheked()">
+                            <span class="main__list-text">Нет</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__list-item" *ngIf="pregnancy===1">
+                    <p class="main__list-title">Срок беременности:</p>
+                    <input class="main__list-input main__list-input-little" type="number" formControlName="gestationalAge">
+                </div>
+
+                <div class="main__list-item" *ngIf="pregnancy===-1">
+                    <p class="main__list-title">Лактация:</p>
+                    <div class="main__list-flex">
+                        <div class="main__list-radio">
+                            <input class="main__list-radio-input" type="radio" formControlName="lactation" value="yes">
+                            <span class="main__list-text">Да</span>
+                        </div>
+                        <div class="main__list-radio">
+                            <input class="main__list-radio-input" type="radio" formControlName="lactation" value="no">
+                            <span class="main__list-text">Нет</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Выбрать диагноз:</p>
+                    <p-autoComplete formControlName="diagnosis" [ngModelOptions]="{standalone: true}" [suggestions]="filteredDiagnosises" (completeMethod)="filterDiagnosis($event)" field="name" [dropdown]="true">
+                        <ng-template let-diagnosis pTemplate="item">
+                            <div class="country-item">
+                                <div>{{diagnosis.name}}</div>
+                            </div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+
+                <button class="main__submit-btn" type="submit" (click)="addUser()">Готово</button>
+
+                <div class="main__footer" *ngIf="footer===true">
+                    <a class="main__footer-btn" [routerLink]="['', 'drug-interactions']">Лекарственное взаимодействие</a>
+                    <a class="main__footer-btn" [routerLink]="['', 'drug-store']">Список препаратов</a>
+                </div>
+            </div>
+
+            <div class="main__list" *ngIf="!flagEvent()">
+                <div class="main__list-item">
+                    <p class="main__list-title">Выбрать пациента:</p>
+                    <p-autoComplete class="main__autocomplete" [(ngModel)]="selectedSearch" [ngModelOptions]="{standalone: true}" [suggestions]="filteredSearchs" (completeMethod)="filterSearch($event)" [dropdown]="true">
+                        <ng-template let-search pTemplate="item">
+                            <div class="country-item">
+                                <div>{{search}}</div>
+                            </div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+                <button class="main__submit-btn" type="submit" (click)="selectUser()">Подтвердить</button>
+                <div class="main__list-item">
+                    <p class="main__list-title">Фамилия:</p>
+                    <p *ngIf="selectedUser != null" class="main__list-input">{{selectedUser.lastname}}</p> 
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Имя:</p>
+                    <p *ngIf="selectedUser != null" class="main__list-input">{{selectedUser.name}}</p> 
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Отчество:</p>
+                    <p *ngIf="selectedUser != null" class="main__list-input">{{selectedUser.padname}}</p> 
+                </div>
+
+                <div class="main__list-item">
+                    <a class="main__list-link" [routerLink]="['', 'medical-card-drug-interaction', 'my-map']">Медкарта</a>
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Возраст:</p>
+                    <p *ngIf="selectedUser != null" class="main__list-input">{{selectedUser.age}}</p> 
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Пол</p>
+                    <p *ngIf="selectedUser != null" class="main__list-input">{{selectedUser.floor}}</p> 
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Хронические заболевания:</p>
+                    <p *ngIf="selectedUser != null" class="main__list-input">{{selectedUser.chronicle}}</p> 
+
+                </div>
+
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Курение:</p>
+                    <div class="main__list-flex">
+                        <p *ngIf="selectedUser != null" class="main__list-input">{{selectedUser.nikotin}}</p> 
+                    </div>
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Количество выкуриваемых сигарет:</p>
+                    <p *ngIf="selectedUser != null" class="main__list-input">{{selectedUser.nikday}}</p> 
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Употребление алкоголя:</p>
+                    <p *ngIf="selectedUser != null" class="main__list-input">{{selectedUser.alko}}</p> 
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Беременность:</p>
+                    <p *ngIf="selectedUser != null" class="main__list-input">{{selectedUser.pregnancy}}</p> 
+                </div>
+
+                <div class="main__list-item" >
+                    <p class="main__list-title">Срок беременности:</p>
+                    <p *ngIf="selectedUser != null" class="main__list-input">{{selectedUser.prday}}</p> 
+                </div>
+
+                <div class="main__list-item" *ngIf="pregnancy===-1">
+                    <p class="main__list-title">Лактация:</p>
+                    <p *ngIf="selectedUser != null" class="main__list-input">{{selectedUser.lactation}}</p> 
+                </div>
+
+                <div class="main__list-item">
+                    <p class="main__list-title">Выбрать диагноз:</p>
+                    <p-autoComplete [(ngModel)]="selectedDiagnosisAdvanced" [ngModelOptions]="{standalone: true}" [suggestions]="filteredDiagnosises" (completeMethod)="filterDiagnosis($event)" field="name" [dropdown]="true">
+                        <ng-template let-diagnosis pTemplate="item">
+                            <div class="country-item">
+                                <div>{{diagnosis.name}}</div>
+                            </div>
+                        </ng-template>
+                    </p-autoComplete>
+                </div>
+
+                <button class="main__submit-btn" type="submit" (click)="footerActive()">Готово</button>
+
+                <div class="main__footer" *ngIf="footer===true">
+                    <a class="main__footer-btn" [routerLink]="['', 'drug-interactions']">Лекарственное взаимодействие</a>
+                    <a class="main__footer-btn" [routerLink]="['', 'drug-store']">Список препаратов</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

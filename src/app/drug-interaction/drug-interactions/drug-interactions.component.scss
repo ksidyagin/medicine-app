@@ -1,0 +1,759 @@
+.main__title {
+    width: 640px;
+    height: 54px;
+    background: #9FE5E9;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 3px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    color: #696D94 !important;
+}
+
+.drug__patient {
+    width: 480px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 2px solid #3CB3BB;
+    border-radius: 10px;
+    padding: 4px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.drug__patient-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #000000;
+    margin-right: 10px;
+}
+
+.drug__patient-name {
+    font-weight: 500;
+    font-size: 22px;
+    color: #000000;
+}
+
+.drug__add {
+    display: flex;
+    align-items: center;
+    margin-bottom: 33px;
+}
+
+::ng-deep .p-autocomplete {
+    margin-bottom: 0;
+    background-color: #199096;
+}
+
+
+
+.drug__add-input {
+    width: 534px;
+    height: 52px;
+    background: #199096;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF !important;
+    margin-right: 7px;
+    border: none;
+    &::placeholder {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #FFFFFF !important;
+    }
+}
+
+.drug__add-btn {
+    width: 120px;
+    height: 50px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 6px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #199096 !important;
+    display: block;
+    outline: none; 
+    border: 2px solid #3CB3BB;
+}
+
+.drug__add-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 120px;
+}
+
+.drug__add-checkbox {
+    width: 21px;
+    height: 21px;
+    margin-right: 10px;
+}
+
+.drug__add-text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #383636;
+    margin-right: 28px;
+}
+
+.drug__wrapper {
+    display: flex;
+    margin-bottom: 35px;
+}
+
+.drug__list {
+    width: 715px;
+    border-right: 2px solid #5A5A5A;
+    padding-right: 46px;
+    margin-right: 36px;
+}
+
+.drug__list-item {
+    width: 700px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    position: relative;
+    padding: 25px;
+    margin-bottom: 49px;
+}
+
+.drug__main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.drug__list-wrapper {
+    width: 50%;
+    &:first-child {
+        padding-right: 10px;
+    }
+}
+
+.drug__list-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 33px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.drug__list-instruction {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: #199096;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.drug__list-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    &:last-child {
+        margin-bottom: 13px;
+    }
+}
+
+.drug__list-underline {
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+.drug__list-footer {
+    width: 100%;
+  margin-top: 50px;
+    background: #DAF5F5;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.drug__footer-item {
+    display: flex;
+    flex-wrap: wrap;
+    
+    align-items: center;
+}
+
+.drug__footer-img {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+.drug__footer-title {
+    font-family: Noto Sans;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.drug__footer-table {
+    width: 100%;
+    display: flex;
+    
+    justify-content: space-between;
+}
+
+.drug__footer-table-item {
+    width: 45%;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.drug__footer-table-title {
+    font-family: Noto Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.drug__footer-table-inneritem {
+    font-family: Noto Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+.drug__footer-link {
+    width: 210px;
+    background: #199096;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF !important;
+    border: none;
+    display: block;
+    cursor: pointer;
+}
+
+.drug__list-counterlist,
+.drug__list-carefullylist {
+    display: flex;
+    align-items: center;
+    max-width: 330px;
+    margin-bottom: 15px;
+}
+
+.drug__counterlist-title {
+    width: 45%;
+    background: #FF4631;
+    border-radius: 8px;
+    text-align: center;
+    padding: 2px 7px;
+    font-family: Noto Sans;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #8A2317;
+    margin-right: 10px;
+}
+
+.drug__carefullylist-title {
+    width: 45%;
+    background: #FFDB00;
+    border-radius: 8px;
+    text-align: center;
+    padding: 2px 7px;
+    font-family: Noto Sans;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #806F08;
+    margin-right: 10px;
+}
+
+.drug__counterlist-imgs,
+.drug__carefullylist-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 170px;
+}
+
+.drug__list-img {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.drug__list-remove {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #199096 !important;
+    font-size: 30px;
+    line-height: 15px;
+    outline: none;
+}
+:host ::ng-deep .p-autocomplete{
+    color: floralwhite !important;
+    background: #199096 !important;
+}
+.drug__list-btn {
+    width: 160px;
+    height: 35px;
+    background: #199096;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #FFFFFF !important;
+    border: none;
+    display: block;
+    outline: none;
+}
+
+.drug__info {
+    width: 700px;
+}
+
+.drug__info-item {
+    background: #FFFFFF;
+    border: 1px solid #199096;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-bottom: 35px;
+    width: 700px;
+}
+
+.drug__info-title {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    margin-bottom: 23px;
+}
+
+.drug__info-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+
+.drug__info-text-title {
+    font-family: Noto Sans;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+    color: #000000;
+    margin-right: 7px;
+}
+
+.drug__info-text-status {
+    width: 100px;
+    background: #FF0303;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px;
+    font-family: Noto Sans;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+
+.drug__info-link {
+    width: 181px;
+    height: 30px;
+    background: #FFFFFF;
+    border: 2px solid #3CB3BB;
+    border-radius: 10px;
+    margin: 0 auto 28px;
+    text-align: center;
+    padding: 0 2px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #3CB3BB !important;
+    cursor: pointer;
+}
+
+.store__list-mini .store__list-item {
+    max-width: 360px;
+    margin-bottom: 29px;
+    margin-right: 26px;
+    & .store__list-title {
+        font-weight: 600 !important;
+        font-size: 18px;
+        color: #000000 !important;
+        margin-bottom: 10px;
+    }
+}
+
+.store__list-mini {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.store-btn {
+    width: 157px;
+    background: #FFFFFF;
+    border: 2px solid #199096;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+    padding: 7px;
+    margin-left:400px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #199096 !important;
+    margin-bottom: 50px;
+}
+
+.store__item {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    max-width: 900px;
+    margin-bottom: 55px;
+    position: relative;
+}
+
+.store__item-title {
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.store__item-instruction {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: #199096 !important;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.store__item-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.store__item-underline {
+    text-decoration-line: underline;
+}
+
+.store__item-link {
+    width: 287px;
+    height: 32px;
+    background: #199096;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 25px;
+    padding: 3px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF !important;
+}
+
+.store__item-generic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100px;
+    height: 31px;
+    background: #FF8A8A;
+    border-radius: 0px 10px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5px;
+}
+
+.drug__show-btn {
+    width: 235px;
+    height: 52px;
+    background: #FFFFFF;
+    border: 2px solid #199096;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 13px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #3CB3BB !important;
+}
+
+.recipe-form {
+    width: 830px;
+    margin: 0 auto 23px;
+    background: #FFFEFE;
+    padding: 31px 15px;
+}
+
+.recipe-form__top {
+    text-align: center;
+    margin-bottom: 29px;
+}
+
+.recipe-form__top-img {
+    width: 784px;
+    height: 244px;
+    margin: 0 auto;
+    margin-bottom: 11px;
+}
+
+.recipe-form__title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    color: #060606;
+}
+
+.recipe-form-text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    margin-bottom: 13px;
+}
+
+.recipe-form__date {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.recipe-form__date-item {
+    width: 120px;
+    background: #FFFFFF;
+    border: 1px solid #199096;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-form-input {
+    background: #FFFFFF;
+    border: 1px solid #199096;
+    border-radius: 10px;
+    padding: 3px 15px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000;
+    margin-bottom: 13px;
+    min-height: 25px;
+}
+
+.recipe-form__main .recipe-form-text:nth-child(3) {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.recipe-form__main .recipe-form-input:nth-child(4) {
+    width: 200px;
+    display: inline-block;
+}
+
+.recipe-form__end-btn {
+    display: block;
+    margin: 0 auto 5px;
+    width: 196px;
+    height: 39px;
+    background: #FFFFFF;
+    border: 2px solid #3CB3BB;
+    border-radius: 15px;
+    text-align: center;
+    padding: 1px 20px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #3CB3BB !important;
+    cursor: pointer;
+}
+
+.recipe-form__end-print {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 159px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #666666 !important;
+    border: none;
+    background: none;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+
+
+.drug__info-text-bold {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.drug__info-text-title {
+    font-family: Noto Sans;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 30px;
+    color: #000000;
+    margin-right: 7px;
+}
+
+.drug__info-text-status-red {
+    width: 130px;
+    background: #FF0303;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px;
+    font-family: Noto Sans;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+.drug__info-text-status-orange {
+    width: 130px;
+    background: #ff5303;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px;
+    font-family: Noto Sans;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+.drug__info-text-status-yellow {
+    width: 130px;
+    background: #fffb03;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px;
+    font-family: Noto Sans;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+.drug__info-text-status-green {
+    width: 130px;
+    background: #2cbe08;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3px;
+    font-family: Noto Sans;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+
+
+//инструкция к препарту
+.main__info {
+    width: 1150px;
+    padding-top: 202px;
+    font-size: 120%;
+}
+
+.main__wrapper {
+    width: 1150px;
+    background: #D7F2F3;
+    border-radius: 15px;
+    margin: 0 auto;
+    padding: 40px 77px;
+    color: #13757A;
+   margin-top: -210px;
+}
+
+.h2-style{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+i{
+    color: #000000;
+    font-size: 120%;
+}
+
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+}
+th, td:first-child {
+    background: #AFCDE7;
+    color: rgba(11, 11, 26, 0.904);
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: rgb(18, 15, 192);
+}
+td {
+    background: #D8E6F3;
+}
+th:first-child, td:first-child {
+    text-align: left;
+}

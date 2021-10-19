@@ -1,0 +1,44 @@
+<div class="profile__top">
+    <div class="patient__list-item">
+        <img class="patient__list-img" src="../../../assets/drug-interaction/pics/profile.png" alt="">
+        <p class="patient__list-name">Загрузить фотографию</p>
+    </div>
+    <div class="profile__top-info">
+        <h2 class="profile__top-name">{{nurse.user.nurse.last_name}} {{nurse.user.nurse.first_name}} {{nurse.user.nurse.patronymic}}</h2>
+        <p class="profile__top-text">
+            <span class="profile__top-title">Статус: </span> <span class="profile__top-titletext">медсестра</span>
+            <img src="../../../assets/nurse/nurse-role.svg" alt="">
+        </p>
+
+        <p class="profile__top-text">
+            <span class="profile__top-title">ID: </span>{{nurse.user.user.id}}
+        </p>
+
+        <p class="profile__top-text">
+            <span class="profile__top-title">Пол: </span>женщина
+        </p>
+
+    </div>
+</div>
+
+<div class="profile__main">
+    <div class="profile__main-item">
+        <p class="profile__main-title">Телефон:</p>
+        <p class="profile__main-text"></p>
+    </div>
+    <div class="profile__main-item">
+        <p class="profile__main-title">Почта:</p>
+        <p class="profile__main-text">{{nurse.user.user.email}}</p>
+    </div>
+    <div class="profile__main-item">
+        <p class="profile__main-title">Дата рождения:</p>
+        <p class="profile__main-text"></p>
+    </div>
+    <div class="profile__main-item">
+        <p class="profile__main-title">Место работы:</p>
+        <p class="profile__main-text"></p>
+    </div>
+    <div class="profile__edit-btn">
+        <p class="profile__edit-btn-title">Редактировать профиль</p>
+    </div>
+</div>
