@@ -1,0 +1,44 @@
+<div class="container">
+    <h2 class="main__title">Мессенджер</h2>
+
+    <div class="messenger__wrapper">
+        <div class="messenger__search">
+            <input type="text" class="messenger__search-input" placeholder="Поиск">
+        </div>
+        <ul class="messenger__list">
+            <li class="messenger__list-item">
+                <a class="messenger__list-link" [routerLink]="['','messenger-dialog']">
+                    <img class="messenger__list-img" src="../../../assets/pics/messenger__list.png" alt="">
+                    <div class="messenger__list-info">
+                        <p class="messenger__list-name">Петрова М.И.</p>
+                        <p class="messenger__list-text">
+                            Добрый день! Вчера я посетил эндокринолога, он мне выписал заключение....
+                        </p>
+                    </div>
+                    <div class="messenger__list-date">
+                        <p class="messenger__list-date--text">Вчера</p>
+                    </div>
+                    <div class="messenger__list-theme">Сан-куротная карта</div>
+                    <div class="messenger__list-status messenger__list-status--red"></div>
+                </a>
+            </li>
+
+            <li class="messenger__list-item">
+                <a class="messenger__list-link" [routerLink]="['','messenger-dialog']">
+                    <img class="messenger__list-img" src="../../../assets/pics/messenger__list.png" alt="">
+                    <div class="messenger__list-info">
+                        <p class="messenger__list-name">Иванова М.И.</p>
+                        <p class="messenger__list-text">
+                            Анкета проверена мед. сестрой. Вы можете записаться на прием к специалисту...
+                        </p>
+                    </div>
+                    <div class="messenger__list-date">
+                        <p class="messenger__list-date--text">15.07.21</p>
+                    </div>
+                    <div class="messenger__list-theme">Запись на прием</div>
+                </a>
+                <div class="messenger__list-status messenger__list-status--green"></div>
+            </li>
+        </ul>
+    </div>
+</div>

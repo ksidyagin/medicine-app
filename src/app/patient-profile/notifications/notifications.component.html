@@ -1,96 +1,101 @@
 <div class="notifications__wrapper">
     <h2 class="main__title">Уведомления</h2>
-    <div class="title">
-        <div class="title_one">
-            <div class="title_txt">
-                Все
+    <div class="not__wrapper">
+        <div class="title">
+            <div class="title_one">
+                <div class="title_txt">
+                    Все
+                </div>
+                <div class="strela">
+                    <img src="../../../assets/pics/strela.png" width="18px" height="16">
+                </div>
             </div>
-            <div class="strela">
-                <img src="../../../assets/pics/strela.png" width="18px" height="16">
+            <div class="title_two">
+                <div class="title_txt">
+                    Поиск
+                </div>
+                <div class="lupa">
+                    <img src="../../../assets/pics/lupa.png" width="22px" height="22">
+                </div>
             </div>
         </div>
-        <div class="title_two">
-            <div class="title_txt">
-                Поиск
+        <div class="section">
+            <div class="section_txt">
+                Завтра сдача анализов в 08:00. Не можете прийти на сдачу анализов?
             </div>
-            <div class="lupa">
-                <img src="../../../assets/pics/lupa.png" width="22px" height="22">
+            <div class="sec_right">
+                <div class="sec_white">
+                    <div class="sec_white_txt">28.07.21</div>
+                </div>
+                <div class="sec_r"></div>
             </div>
         </div>
-    </div>
-    <div class="section">
-        <div class="section_txt">
-            Завтра сдача анализов в 08:00. Не можете прийти на сдачу анализов?
-        </div>
-        <div class="sec_right">
-            <div class="sec_white">
-                <div class="sec_white_txt">28.07.21</div>
-            </div>
-            <div class="sec_r"></div>
-        </div>
-    </div>
 
-    <div class="section">
-        <div class="section_txt">
-            Анкета проверена мед. сестрой. Вы можете записаться на прием к специалисту и на сдачу анализов.
-            <a class="appoitment__link" [routerLink]="['','notifications-two']" routerLinkActive="active">Открыть</a>
-        </div>
-        <div class="sec_right">
-            <div class="sec_white">
-                <div class="sec_white_txt">05.07.21</div>
+        <div class="section">
+            <div class="section_txt">
+                Анкета проверена мед. сестрой. Вы можете записаться на прием к специалисту и на сдачу анализов.
+                <a class="appoitment__link" [routerLink]="['','notifications-two']"
+                    routerLinkActive="active">Открыть</a>
             </div>
-            <div class="sec_b"></div>
+            <div class="sec_right">
+                <div class="sec_white">
+                    <div class="sec_white_txt">05.07.21</div>
+                </div>
+                <div class="sec_b"></div>
+            </div>
         </div>
-    </div>
 
-    <div class="section">
-        <div class="section_txt">
-            Документы для сан-курортной карты проверены. Вы можете записаться на сдачу анализов и обследований.
-            <a class="appoitment__link" [routerLink]="['','notifications-one']" routerLinkActive="active">Открыть</a>
-        </div>
-        <div class="sec_right">
-            <div class="sec_white">
-                <div class="sec_white_txt">26.06.21</div>
+        <div class="section">
+            <div class="section_txt">
+                Документы для сан-курортной карты проверены. Вы можете записаться на сдачу анализов и обследований.
+                <a class="appoitment__link" [routerLink]="['','notifications-one']"
+                    routerLinkActive="active">Открыть</a>
             </div>
-            <div class="sec_b"></div>
+            <div class="sec_right">
+                <div class="sec_white">
+                    <div class="sec_white_txt">26.06.21</div>
+                </div>
+                <div class="sec_b"></div>
+            </div>
         </div>
-    </div>
 
-    <div class="section">
-        <div class="section_txt">
-            Завтра прием у хирурга, Иванова И.А., в 12:00. Не можете прийти на прием?
-        </div>
-        <div class="sec_right">
-            <div class="sec_white">
-                <div class="sec_white_txt">12.05.21</div>
+        <div class="section">
+            <div class="section_txt">
+                Завтра прием у хирурга, Иванова И.А., в 12:00. Не можете прийти на прием?
             </div>
-            <div class="sec_b"></div>
+            <div class="sec_right">
+                <div class="sec_white">
+                    <div class="sec_white_txt">12.05.21</div>
+                </div>
+                <div class="sec_b"></div>
+            </div>
         </div>
-    </div>
 
-    <div class="section">
-        <div class="section_txt">
-            Вам выписали рецепт, посмотреть который можно в разделе “Мои рецепты”
-        </div>
-        <div class="sec_right">
-            <div class="sec_white">
-                <div class="sec_white_txt">05.04.21</div>
+        <div class="section">
+            <div class="section_txt">
+                Вам выписали рецепт, посмотреть который можно в разделе “Мои рецепты”
             </div>
-            <div class="sec_b"></div>
+            <div class="sec_right">
+                <div class="sec_white">
+                    <div class="sec_white_txt">05.04.21</div>
+                </div>
+                <div class="sec_b"></div>
+            </div>
         </div>
-    </div>
 
-    <div *ngIf="diagnos_notification1 != '' && diagnos_notification1" class="section">
-        <div class="section_txt">
-            <b>Новое сообщение!</b>
-            Анкета проверена мед. сестрой. Вы можете записаться на прием к специалисту и на сдачу анализов.
-            <a class="appoitment__link" [routerLink]="['','notifications-two']" routerLinkActive="active">Открыть</a>
-        </div>
-        <div class="sec_right">
-            <div class="sec_white">
-                <div class="sec_white_txt">21.09.21</div>
+        <div *ngIf="diagnos_notification1 != '' && diagnos_notification1" class="section">
+            <div class="section_txt">
+                <b>Новое сообщение!</b>
+                Анкета проверена мед. сестрой. Вы можете записаться на прием к специалисту и на сдачу анализов.
+                <a class="appoitment__link" [routerLink]="['','notifications-two']"
+                    routerLinkActive="active">Открыть</a>
             </div>
-            <div class="sec_r"></div>
+            <div class="sec_right">
+                <div class="sec_white">
+                    <div class="sec_white_txt">21.09.21</div>
+                </div>
+                <div class="sec_r"></div>
+            </div>
         </div>
     </div>
 </div>

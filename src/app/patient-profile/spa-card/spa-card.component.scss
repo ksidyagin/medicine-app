@@ -6,19 +6,25 @@
   font-weight: 700;
   font-size: 35px;
   line-height: 48px;
-  color: #696D94;
-  width: 700px;
+  color: #696d94;
+  width: 500px;
   height: 49px;
-  background: #9FE5E9;
+  background: #9fe5e9;
   border-radius: 10px;
   text-align: center;
   padding: 2px;
   margin-bottom: 40px;
+  margin-left: 15%;
+}
+
+.san__wrapper {
+  width: 70%;
+  margin: 0 auto;
 }
 
 .sanmap__wrapper {
-  width: 850px;
-  background: #D7F2F3;
+  width: 100%;
+  background: #d7f2f3;
   border-radius: 15px;
   padding: 50px 40px;
   margin-bottom: 30px;
@@ -46,21 +52,21 @@
   width: 349px;
   display: block;
   margin: 0 auto;
-  background: #3CB3BB;
+  background: #3cb3bb;
   border-radius: 10px;
   text-align: center;
   padding: 6px 10px;
   font-weight: 400;
   font-size: 25px;
   line-height: 34px;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 .sanmap__title {
   font-weight: 700;
   font-size: 30px;
   line-height: 41px;
-  color: #13757A;
+  color: #13757a;
   margin-bottom: 23px;
 }
 
@@ -68,43 +74,43 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 50px;
-  width: 850px;
+  width: 100%;
 }
 
 .sanmap__list-item {
   width: auto;
   margin: 0 33px 17px 0;
-  background: #FFFFFF;
-  border: 2px solid #3CB5BB;
+  background: #ffffff;
+  border: 2px solid #3cb5bb;
   border-radius: 10px;
   text-align: center;
   padding: 6px 12px;
   font-weight: 400;
   font-size: 20px;
   line-height: 27px;
-  color: #3CB5BB !important;
+  color: #3cb5bb !important;
   cursor: pointer;
   &:hover {
-    color: #FFFFFF !important;
-    background: #3CB5BB;
+    color: #ffffff !important;
+    background: #3cb5bb;
   }
 }
 
 .sanmap__info {
-  width: 850px;
-  background: #D7F2F3;
+  width: 100%;
+  background: #d7f2f3;
   border-radius: 15px;
 }
 
 .sanmap__info-title {
-  background: #3CB3BB;
+  background: #3cb3bb;
   border-radius: 10px;
   width: 100%;
   padding: 10px 45px;
   font-weight: 400;
   font-size: 24px;
   line-height: 33px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .sanmap__ul {

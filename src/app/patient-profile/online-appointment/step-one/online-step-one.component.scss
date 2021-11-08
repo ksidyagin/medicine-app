@@ -3,21 +3,22 @@
   width: 800px;
   padding: 65px;
   font-family: Noto Sans;
-  background: #D7F2F3;
+  background: #d7f2f3;
   border-radius: 15px;
 }
 .profile-title {
   font-weight: 700;
   font-size: 35px;
   line-height: 48px;
-  color: #696D94;
+  color: #696d94;
   width: 378px;
   height: 49px;
-  background: #9FE5E9;
+  background: #9fe5e9;
   border-radius: 10px;
   text-align: center;
   padding: 2px;
   margin-bottom: 40px;
+  margin-left: 24%;
 }
 
 .stepone__service {
@@ -55,8 +56,8 @@
   width: 100%;
   margin-bottom: 39px;
   height: 44px;
-  background: #FFFFFF !important;
-  border: 2px solid #3CB3BB;
+  background: #ffffff !important;
+  border: 2px solid #3cb3bb;
   border-radius: 10px;
   color: #383636 !important;
 }
@@ -75,7 +76,7 @@
   margin: 0 auto 39px;
   border-radius: 10px;
   display: flex;
-& p-selectButton {
+  & p-selectButton {
     width: 470px;
     margin: 0 auto;
     font-weight: 400;
@@ -100,7 +101,7 @@
   margin: 0 auto 39px;
   border-radius: 10px;
   display: flex;
-& p-selectButton {
+  & p-selectButton {
     width: 270px;
     margin: 0 auto;
     font-weight: 400;
@@ -113,14 +114,14 @@
 
 .stepone__link-next {
   width: 240px;
-  background: #FFFFFF;
-  border: 2px solid #3CB3BB;
+  background: #ffffff;
+  border: 2px solid #3cb3bb;
   border-radius: 15px;
   margin: 0 auto;
   padding: 3px 75px;
   font-weight: 400;
   font-size: 30px;
   line-height: 41px;
-  color: #3CB3BB !important;
+  color: #3cb3bb !important;
   text-align: center;
 }

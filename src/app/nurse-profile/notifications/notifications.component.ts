@@ -1,10 +1,9 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-notifications',
   templateUrl: './notifications.component.html',
-  styleUrls: ['./notifications.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./notifications.component.scss']
 })
 export class NotificationsComponent implements OnInit {
 

@@ -16,7 +16,7 @@ html {
 
 ul[class],
 ol[class] {
-    padding: 0
+    padding: 0;
 }
 
 body,
@@ -35,16 +35,16 @@ figcaption,
 blockquote,
 dl,
 dd {
-    margin: 0
+    margin: 0;
 }
 
 ul[class] {
-    list-style: none
+    list-style: none;
 }
 
 img {
     max-width: 100%;
-    display: block
+    display: block;
 }
 
 input,
@@ -73,7 +73,7 @@ body {
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: "Noto Sans", sans-serif;
 }
 
 .container {
@@ -93,7 +93,7 @@ body {
 .header-search__clinic .p-dropdown {
     background: transparent;
     border: none;
-     :active {
+    :active {
         border: none;
     }
 }
@@ -129,10 +129,10 @@ body {
     & span.p-input-icon-left {
         width: 100%;
         margin-bottom: 30px !important;
-        &>i:first-of-type {
+        & > i:first-of-type {
             left: auto;
             right: 10px;
-            color: #FFFFFF !important;
+            color: #ffffff !important;
         }
         & .p-inputtext {
             width: 100%;
@@ -143,28 +143,28 @@ body {
             font-weight: 400;
             font-size: 18px;
             line-height: 25px;
-            color: #FFFFFF !important;
+            color: #ffffff !important;
             padding: 10px 60px 10px 15px;
             &::placeholder {
-                color: #FFFFFF !important;
+                color: #ffffff !important;
             }
         }
     }
     & .p-dropdown {
-        background: #3CB3BB !important;
+        background: #3cb3bb !important;
         border-radius: 10px !important;
         font-weight: 400 !important;
         font-size: 24px !important;
         line-height: 33px !important;
-        color: #FFFFFF !important;
+        color: #ffffff !important;
         padding: 10px !important;
         margin-bottom: 33px !important;
         width: 242px !important;
     }
 }
 
-.p-input-icon-left>i,
-.p-input-icon-right>i {
+.p-input-icon-left > i,
+.p-input-icon-right > i {
     top: 35% !important;
     margin-right: 10px !important;
 }
@@ -176,7 +176,7 @@ body {
 
 .p-dropdown .p-dropdown-label,
 .p-dropdown .p-dropdown-trigger {
-    color: #FFFFFF !important;
+    color: #ffffff !important;
     justify-content: start;
     padding-right: 0 !important;
 }
@@ -189,7 +189,7 @@ body {
 .p-dropdown .p-dropdown-clear-icon {
     width: auto !important;
     right: auto !important;
-    color: #FFFFFF !important;
+    color: #ffffff !important;
 }
 
 .p-dropdown:not(.p-disabled).p-focus {
@@ -219,7 +219,7 @@ body {
 
 // main.answers
 .answers__wrapper .p-accordion p-accordiontab .p-accordion-content {
-    background: #FFFFFF !important;
+    background: #ffffff !important;
     border-radius: 0 0 15px 15px !important;
     margin-top: -10px !important;
     padding: 22px 32px;
@@ -235,7 +235,7 @@ body {
     font-weight: 400;
     font-size: 30px;
     line-height: 41px;
-    color: #FFFFFF !important;
+    color: #ffffff !important;
     &:hover {
         text-decoration: underline;
     }
@@ -251,16 +251,16 @@ body {
 .answers__p-button .p-button {
     width: 335px;
     height: 79px;
-    background: #3CB5BB !important;
+    background: #3cb5bb !important;
     border-radius: 10px !important;
     margin: 0 auto !important;
     text-align: center !important;
     font-weight: 400 !important;
     font-size: 40px !important;
     line-height: 54px !important;
-    color: #FDFDFD !important;
+    color: #fdfdfd !important;
     padding: 11px;
-    border: 1px solid #3CB5BB !important;
+    border: 1px solid #3cb5bb !important;
 }
 
 .p-dialog {
@@ -271,23 +271,23 @@ body {
 }
 
 .p-dialog .p-dialog-header {
-    background: #13757A !important;
+    background: #13757a !important;
     border-top-right-radius: 15px !important;
     border-top-left-radius: 15px !important;
-    color: #FFFFFF !important;
+    color: #ffffff !important;
     padding: 30px 80px 0 106px !important;
 }
 
 .p-dialog .p-dialog-content {
-    background: #13757A !important;
-    color: #FFFFFF !important;
+    background: #13757a !important;
+    color: #ffffff !important;
     padding: 0 80px 0 106px !important;
     height: 100% !important;
 }
 
 .p-dialog .p-dialog-footer {
-    background: #13757A !important;
-    color: #FFFFFF !important;
+    background: #13757a !important;
+    color: #ffffff !important;
     padding: 15px 15px 15px 106px !important;
     text-align: right;
     border-bottom-right-radius: 15px !important;
@@ -298,7 +298,7 @@ body {
     font-weight: 700 !important;
     font-size: 48px !important;
     line-height: 65px !important;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 43px;
 }
 
@@ -319,13 +319,13 @@ body {
 .p-accordion p-accordiontab .p-accordion-header .p-accordion-header-link,
 .p-accordion p-accordiontab .p-accordion-header .p-accordion-header-link:hover {
     height: 63px;
-    background: #3CB3BB !important;
+    background: #3cb3bb !important;
     border-radius: 10px !important;
     color: #ffffff !important;
 }
 
 .p-accordion p-accordiontab .p-accordion-content {
-    background: #D7F2F3 !important;
+    background: #d7f2f3 !important;
     border-radius: 0 0 15px 15px !important;
     margin-top: -10px !important;
     padding: 32px 28px;
@@ -335,7 +335,7 @@ body {
     font-weight: 400;
     font-size: 36px;
     line-height: 49px;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .examination__list-item .p-accordion-header-text {
@@ -350,8 +350,8 @@ body {
     width: 100%;
     margin-bottom: 39px;
     height: 44px;
-    background: #FFFFFF !important;
-    border: 2px solid #3CB3BB;
+    background: #ffffff !important;
+    border: 2px solid #3cb3bb;
     border-radius: 10px;
     color: #383636 !important;
 }
@@ -397,14 +397,14 @@ body {
 }
 
 .p-selectbutton .p-button.p-highlight {
-    background: #3CB3BB !important;
+    background: #3cb3bb !important;
     border: none !important;
-    border-color: #3CB3BB !important;
+    border-color: #3cb3bb !important;
     color: #ffffff !important;
 }
 
 .p-selectbutton .p-button.p-highlight:hover {
-    background: #3CB3BB !important;
+    background: #3cb3bb !important;
     border: none !important;
     border-color: transparent !important;
     color: #ffffff;
@@ -413,11 +413,11 @@ body {
 .p-selectbutton .p-button {
     background: #ffffff;
     border: 1px solid #ced4da;
-    color: #3CB3BB !important;
+    color: #3cb3bb !important;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
-// vaccination-form 
+// vaccination-form
 .vaccination-form__list-item .p-autocomplete {
     width: 55%;
 }
@@ -437,14 +437,14 @@ body {
 
 .vaccination-form__list-item:host ::ng-deep .multiselect-custom {
     .p-multiselect-label {
-        padding-top: .25rem;
-        padding-bottom: .25rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
     }
     .country-item-value {
-        padding: .25rem .5rem;
+        padding: 0.25rem 0.5rem;
         border-radius: 3px;
         display: inline-flex;
-        margin-right: .5rem;
+        margin-right: 0.5rem;
         background-color: var(--primary-color);
         color: var(--primary-color-text);
         img.flag {
@@ -458,8 +458,8 @@ body {
 
 .vaccination-form__list-item .p-multiselect {
     min-width: 335px;
-    background: #FFFFFF;
-    border: 2px solid #3CB3BB;
+    background: #ffffff;
+    border: 2px solid #3cb3bb;
     border-radius: 15px;
     font-weight: 400;
     font-size: 22px;
@@ -474,4 +474,21 @@ body {
     & .p-multiselect-filter-icon {
         top: 35%;
     }
+}
+
+.new_search .p-autocomplete .p-autocomplete-panel {
+    width: 70%;
+}
+
+.new_search p-autocomplete .p-autocomplete-item {
+    white-space: normal;
+}
+
+.new_search .p-autocomplete-dd .p-autocomplete-input {
+    height: 50px;
+    padding: 2px 10px !important;
+}
+
+.new_search .p-autocomplete {
+    height: 50px;
 }

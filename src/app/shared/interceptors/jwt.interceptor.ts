@@ -1,29 +1,31 @@
 import { Injectable } from '@angular/core';
-import {
-  HttpRequest,
-  HttpHandler,
-  HttpEvent,
-  HttpInterceptor
-} from '@angular/common/http';
+import { PLATFORM_ID, Inject, Injector } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/mergeMap';
+import 'rxjs/add/observable/fromPromise';
+
+import * as express from 'express';
 import { Observable } from 'rxjs';
-import { JWT_NAME } from '../services/authentification/authentification.service';
+import { AuthenticationService } from '../services/authentification/authentification.service';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
 
-  constructor() {}
+  constructor(
+		@Inject(PLATFORM_ID)
+		private platformId: string,
+		private injector: Injector,
+		private authService: AuthenticationService
+	) {}
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    const token = localStorage.getItem(JWT_NAME);
-
-    if(token) {
-      const clonedReq = request.clone({
-        headers: request.headers.set('Authorization',
-        'Bearer ' + token)
-      });
-      return next.handle(clonedReq);
-    } else {
-      return next.handle(request);
-    }
-  }
+	intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+	
+		if(1) {
+		  return next.handle(request);
+		} else {
+		  return next.handle(request);
+		}
+	  }
 }

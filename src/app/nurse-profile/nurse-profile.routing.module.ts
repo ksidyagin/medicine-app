@@ -11,12 +11,12 @@ import { QuestionnairesComponent } from "./questionnaires/questionnaires.compone
 
 const routes: Routes = [
     { path: '', component: NurseProfileComponent, children: [
-      {path: 'nurse-account', component: NurseAccountComponent,canActivate: [AuthGuard]},
-      {path: 'nurse-common_base', component: CommonBaseComponent,canActivate: [AuthGuard]},
-      {path: 'nurse-questionaries', component: QuestionnairesComponent,canActivate: [AuthGuard]},
-      {path: 'nurse-pending_review', component: PendingReviewComponent,canActivate: [AuthGuard]},
-      {path: 'nurse-declaration', component: DeclarationComponent,canActivate: [AuthGuard]},
-      {path: 'nurse-notifications', component: NotificationsComponent,canActivate: [AuthGuard]}
+      {path: 'nurse-account', component: NurseAccountComponent},
+      {path: 'nurse-common_base', component: CommonBaseComponent,canActivate: [AuthGuard], data: {expectedRole: 'nurse'}},
+      {path: 'nurse-questionaries', component: QuestionnairesComponent,canActivate: [AuthGuard], data: {expectedRole: 'nurse'}},
+      {path: 'nurse-pending_review', component: PendingReviewComponent,canActivate: [AuthGuard], data: {expectedRole: 'nurse'}},
+      {path: 'nurse-declaration', component: DeclarationComponent,canActivate: [AuthGuard], data: {expectedRole: 'nurse'}},
+      {path: 'nurse-notifications', component: NotificationsComponent,canActivate: [AuthGuard], data: {expectedRole: 'nurse'}}
  
     ]} ];
   @NgModule({

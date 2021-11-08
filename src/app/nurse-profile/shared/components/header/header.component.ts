@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import jwtDecode from 'jwt-decode';
+import { AuthenticationService } from 'src/app/shared/services/authentification/authentification.service';
 
 @Component({
   selector: 'nurse-header',
@@ -7,12 +8,21 @@ import jwtDecode from 'jwt-decode';
   styleUrls: ['./header.component.scss']
 })
 export class DrugInteractionHeaderComponent implements OnInit {
-  user: any = jwtDecode(localStorage.getItem('user-token'));
-  name = this.user.user.nurse.first_name.substr(0, 1);
-  patronymic = this.user.user.nurse.patronymic.substr(0, 1);
-  constructor() { }
+  user: any;
+  firstname: any
+  patronymic
+  nurse: any;
+  constructor(private changeDetection: ChangeDetectorRef, private auth: AuthenticationService) { 
+     
+   }
 
   ngOnInit(): void {
+    this.auth.getUser().subscribe((data:any)=>{
+      this.user = jwtDecode(data.token)
+      this.firstname = this.user.user.nurse.first_name.substr(0, 1);
+      this.patronymic = this.user.user.nurse.patronymic.substr(0, 1);
+      this.changeDetection.detectChanges();
+    })
   }
 
 }

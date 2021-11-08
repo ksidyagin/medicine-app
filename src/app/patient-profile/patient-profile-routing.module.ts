@@ -28,36 +28,40 @@ import {SpecializedComponent} from "./online-appointment/specialized/specialized
 import {AppointmentDoctorComponent} from "./appointment-doctor/appointment-doctor.component";
 import { OnlineAppointmentComponent } from "./online-appointment/online-appointment.component";
 import { AuthGuard } from "../shared/guards/auth.guard";
+import { MessengerComponent } from "./messenger/messenger.component";
+import { MessengerDialogComponent } from "./messenger-dialog/messenger-dialog.component";
 
 const routes: Routes = [
     { path: '', component: PatientProfileComponent, children: [
-      {path: 'spa-card', component: SpaCardComponent,canActivate: [AuthGuard]},
-      {path: 'interrogation', component: InterrogationComponent,canActivate: [AuthGuard]},
-      {path: 'my-links', component: MyLinksComponent,canActivate: [AuthGuard]},
-      {path: 'drug', component: DrugComponent,canActivate: [AuthGuard]},
-      {path: 'my-notes', component: MyNotesComponent,canActivate: [AuthGuard]},
-      {path: 'my-recipes', component: MyRecipesComponent,canActivate: [AuthGuard]},
-        { path: 'online-appointment-patient', component: OnlineAppointmentComponent,canActivate: [AuthGuard], children: [
-            { path: 'online-step-one', component: OnlineStepOneComponent,canActivate: [AuthGuard]},
-            { path: 'online-step-two', component: OnlineStepTwoComponent,canActivate: [AuthGuard]},
-            { path: 'online-step-tree', component: OnlineStepTreeComponent,canActivate: [AuthGuard]},
-            { path: 'online-step-result', component: OnlineStepResultComponent,canActivate: [AuthGuard]},
-            { path: 'specialized', component: SpecializedComponent,canActivate: [AuthGuard]},
+      {path: 'spa-card', component: SpaCardComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'interrogation', component: InterrogationComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'my-links', component: MyLinksComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'drug', component: DrugComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'my-notes', component: MyNotesComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'my-recipes', component: MyRecipesComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+        { path: 'online-appointment-patient', component: OnlineAppointmentComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}, children: [
+            { path: 'online-step-one', component: OnlineStepOneComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+            { path: 'online-step-two', component: OnlineStepTwoComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+            { path: 'online-step-tree', component: OnlineStepTreeComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+            { path: 'online-step-result', component: OnlineStepResultComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+            { path: 'specialized', component: SpecializedComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
           ]},
-      {path: 'reference', component: ReferenceComponent,canActivate: [AuthGuard]},
-      {path: 'services', component: ServicesComponent,canActivate: [AuthGuard]},
-      {path: 'account', component: AccountComponent,canActivate: [AuthGuard]},
-      { path: 'personal-information', component: PersonalInformationComponent,canActivate: [AuthGuard]},
-      {path: 'my-appoitment', component: MyAppoitmentComponent,canActivate: [AuthGuard]},
-      {path: 'appoitment', component: AppointmentComponent,canActivate: [AuthGuard]},
-      {path: 'archive', component: ArchiveComponent,canActivate: [AuthGuard]},
-      {path: 'appointment-doctor', component: AppointmentDoctorComponent,canActivate: [AuthGuard]},
-      {path: 'questiong-view', component: QuestioningViewComponent,canActivate: [AuthGuard]},
-      {path: 'view-record', component: ViewRecordComponent,canActivate: [AuthGuard]},
-      {path: 'view-recipe', component: ViewRecipeComponent,canActivate: [AuthGuard]},
-      {path: 'notifications', component: NotificationsComponent,canActivate: [AuthGuard]},
-      {path: 'notifications-one', component: NotificationsOneComponent,canActivate: [AuthGuard]},
-      {path: 'notifications-two', component: NotificationsTwoComponent,canActivate: [AuthGuard]},
+      {path: 'reference', component: ReferenceComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'services', component: ServicesComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'account', component: AccountComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      { path: 'personal-information', component: PersonalInformationComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'my-appoitment', component: MyAppoitmentComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'appoitment', component: AppointmentComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'archive', component: ArchiveComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'appointment-doctor', component: AppointmentDoctorComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'questiong-view', component: QuestioningViewComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'view-record', component: ViewRecordComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'view-recipe', component: ViewRecipeComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'notifications', component: NotificationsComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'notifications-one', component: NotificationsOneComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      {path: 'notifications-two', component: NotificationsTwoComponent,canActivate: [AuthGuard], data: {expectedRole: 'patient'}},
+      { path: 'messenger', component: MessengerComponent, canActivate: [AuthGuard], data: {expectedRole: 'patient'} },
+      { path: 'messenger-dialog', component: MessengerDialogComponent, canActivate: [AuthGuard], data: {expectedRole: 'patient'} },
     ]} ];
   @NgModule({
     imports: [RouterModule.forChild(routes)],

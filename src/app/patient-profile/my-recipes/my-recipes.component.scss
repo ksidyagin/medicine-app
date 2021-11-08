@@ -10,6 +10,7 @@
     font-size: 35px;
     line-height: 48px;
     color: #696d94 !important;
+    margin-left: 5%;
 }
 .drug__add-btn {
     width: 120px;
@@ -23,13 +24,15 @@
     line-height: 21px;
     color: #199096 !important;
     display: block;
-    outline: none; 
-    border: 2px solid #3CB3BB;
+    outline: none;
+    border: 2px solid #3cb3bb;
 }
 .drug__item {
-    width: 120px;
-    height: auto;
-    display: flex; flex-wrap: wrap; flex-direction: row;
+    width: auto;
+    min-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     background: white;
     border-radius: 15px;
     text-align: center;
@@ -38,18 +41,18 @@
     font-size: 14px;
     color: #199096 !important;
     display: block;
-    outline: none; 
-    border: 2px solid #3CB3BB;
+    outline: none;
+    border: 2px solid #3cb3bb;
 }
 .recipes {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     background-color: #e3f6f7;
     padding: 10px;
-    max-width: 1300px;
+    width: 90%;
     font-family: Noto Sans !important;
     padding-bottom: 40px;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
 }
 
 .recipes h4,
@@ -85,6 +88,7 @@
 .load-get-btn {
     display: flex;
     margin-bottom: 60px;
+    margin-left: 5%;
 }
 .load-btn,
 .get-btn {
@@ -109,29 +113,30 @@
     border-right: 10px solid #e3f6f7;
 }
 
-.new_search{
+.new_search {
     margin: 0 auto 100px;
-    width: 800px;
+    width: 70%;
     border-radius: 10px;
     background: rgba(59, 179, 187, 0.22);
-    background-color: #69D2D9;
+    background-color: rgba(59, 179, 187, 0.22);
+    background-color: #69d2d9;
+    padding: 50px;
 }
 
-.new_search h2{
-    padding: 40px 0;
-    padding-left: 37%;
+.new_search h2 {
     color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
 }
-.new_search img{
+.new_search img {
     margin: 30px 10%;
 }
 
-.new_search label{
-    margin-left: 10%;
+.new_search label {
+    margin-left: 5%;
 }
 
-.send-btn{
-    margin-top: 100px;
+.send-btn {
     background: white;
     border-radius: 10px;
     text-align: center;
@@ -139,6 +144,8 @@
     font-size: 18px;
     line-height: 21px;
     color: #199096 !important;
-    border: 2px solid #3CB3BB;
-    padding:10px 0 10px 40px;
+    border: 2px solid #3cb3bb;
+    width: 25%;
+    padding: 10px;
+    margin: 50px auto 0;
 }

@@ -6,10 +6,10 @@
     font-weight: 700;
     font-size: 35px;
     line-height: 48px;
-    color: #696D94;
+    color: #696d94;
     width: 500px;
     height: 49px;
-    background: #9FE5E9;
+    background: #9fe5e9;
     border-radius: 10px;
     text-align: center;
     padding: 2px;
@@ -17,10 +17,11 @@
 }
 
 .archive__wrapper {
-    width: 960px;
-    background: #E3F6F7;
+    width: 90%;
+    background: #e3f6f7;
     border-radius: 10px;
     padding: 17px;
+    margin: 0 auto 100px;
 }
 
 .archive__table-top {
@@ -41,8 +42,8 @@
 }
 
 .archive__table-item {
-    background: #FFFFFF;
-    border: 1px solid #C4C4C4;
+    background: #ffffff;
+    border: 1px solid #c4c4c4;
     border-radius: 10px;
     width: 100%;
     padding: 9px 33px;
@@ -63,5 +64,5 @@
 
 .archive__table-link {
     text-decoration-line: underline;
-    color: #3CB3BB !important;
+    color: #3cb3bb !important;
 }

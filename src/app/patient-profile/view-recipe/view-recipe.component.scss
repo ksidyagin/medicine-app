@@ -10,17 +10,19 @@
     font-size: 35px;
     line-height: 48px;
     color: #696d94 !important;
+    margin-left: 15%;
 }
 
-.information_recipe{
+.information_recipe {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background: #E3F6F7;
+    background: #e3f6f7;
     border-radius: 10px;
     padding: 10px;
-    width: 1300px;
+    width: 70%;
     font-family: Noto Sans !important;
+    margin: 0 auto;
 }
-.information_recipe h3{
+.information_recipe h3 {
     padding: 40px 40px;
 }
 
@@ -28,11 +30,11 @@
     margin-top: 10px 0;
 }
 
-.information_recipe a{
+.information_recipe a {
     font-family: Noto Sans;
     text-decoration-line: underline;
 }
-.information_recipe .title{
+.information_recipe .title {
     margin-right: 15px;
 }
 
@@ -42,12 +44,12 @@
     margin-bottom: 30px;
 }
 
-.QR-code{
-    margin-left: 40%;
-    margin-bottom: 25px;
+.QR-code {
+    margin: 0 auto 50px;
 }
 
-.information_recipe button{
-    margin-left: 40%;
+.information_recipe button {
+    margin: 0 auto;
     border: none;
+    display: block;
 }

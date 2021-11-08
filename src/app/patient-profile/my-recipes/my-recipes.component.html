@@ -54,15 +54,19 @@
     <div class="new_search" *ngIf="flagVisibleForm">
         <h2>Новый рецепт</h2>
         <label>Лекарственный препарат</label>
-        <p-autoComplete [(ngModel)]="medication" [suggestions]="filteredDrugNames" (completeMethod)="filterDrugName($event)" [minLength]="1" [dropdown]="true" style="margin-right:20px;width: 500px;height: 50px;">
+        <p-autoComplete [(ngModel)]="medication" [suggestions]="filteredDrugNames"
+            (completeMethod)="filterDrugName($event)" [minLength]="1" [dropdown]="true"
+            style="width: 75%;height: 50px;display: inline-block;margin: 0 0 1% 5%;">
         </p-autoComplete>
-        <button style="float: right;" class="drug__add-btn" (click)="addMedication()">Добавить</button>
-        <div style="display: flex; flex-wrap: wrap; flex-direction: row;" *ngFor="let item of drugs">
+        <button style="float: right; margin-right: 5%;" class="drug__add-btn"
+            (click)="addMedication()">Добавить</button>
+        <div style="margin-bottom: 1%; max-width: 90%; margin-left: 5%; display: flex; flex-wrap: wrap; flex-direction: row;"
+            *ngFor="let item of drugs">
             <div class="drug__item">
-                {{item}}  X
+                {{item}} X
             </div>
         </div>
-        
-        <div class="send-btn" >Отправить</div>
+
+        <div class="send-btn">Отправить</div>
     </div>
 </div>

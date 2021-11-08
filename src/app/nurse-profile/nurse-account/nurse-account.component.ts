@@ -1,5 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import jwtDecode from 'jwt-decode';
+import { AuthenticationService } from 'src/app/shared/services/authentification/authentification.service';
 
 @Component({
   selector: 'app-nurse-account',
@@ -9,10 +10,16 @@ import jwtDecode from 'jwt-decode';
 })
 export class NurseAccountComponent implements OnInit {
 
-  nurse: any =  jwtDecode(localStorage.getItem('user-token'));
-  constructor() { }
+  nurse: any;
+    constructor(private changeDetection: ChangeDetectorRef, private auth: AuthenticationService) { 
+       
+     }
 
   ngOnInit(): void {
+    this.auth.getUser().subscribe((data:any)=>{
+      this.nurse = jwtDecode(data.token)
+      this.changeDetection.detectChanges();
+    })
   }
 
 }

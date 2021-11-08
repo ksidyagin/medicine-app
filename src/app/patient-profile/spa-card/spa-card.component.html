@@ -2,63 +2,68 @@
   <div class="account__wrapper">
     <h2 class="profile-title">Сан-курортная карта</h2>
 
-    <div class="sanmap__wrapper">
-      <div class="sanmap__top">
-        <img class="sanmap__top-img" src="../../../assets/pics/иконка _осторожно_.png" alt="">
-        <p class="sanmap__top-text">
-          Для получения сан-курортной карты Вам необходимо прикрепить путевку и дождаться проверки документа мед. сестрой
-        </p>
+    <div class="san__wrapper">
+      <div class="sanmap__wrapper">
+        <div class="sanmap__top">
+          <img class="sanmap__top-img" src="../../../assets/pics/иконка _осторожно_.png" alt="">
+          <p class="sanmap__top-text">
+            Для получения сан-курортной карты Вам необходимо прикрепить путевку и дождаться проверки документа мед.
+            сестрой
+          </p>
+        </div>
+        <a href="" class="sanmap__top-btn">Прикрепить документ(ы)</a>
       </div>
-      <a href="" class="sanmap__top-btn">Прикрепить документ(ы)</a>
+
+      <h3 class="sanmap__title">Профиль сан-курортного лечения:</h3>
+
+      <div class="sanmap__list">
+        <p class="sanmap__list-item" (click)="sanMapCardio()">кардиологический</p>
+        <p class="sanmap__list-item" (click)="sanMapGastro()">гастроэнтерологический</p>
+        <p class="sanmap__list-item" (click)="sanMapPulmonary()">пульмонологический</p>
+        <p class="sanmap__list-item" (click)="sanMapGynecology()">гинекологический</p>
+        <p class="sanmap__list-item" (click)="sanMapKidney()">болезни почек и мочеполовой системы</p>
+      </div>
+
+      <div class="sanmap__info">
+        <h4 class="sanmap__info-title">Список обследований, которые необходимо пройти:</h4>
+        <ul class="sanmap__ul" *ngIf="sanmap==='cardio'">
+          <li class="sanmap__ul-li">- общий анализ крови</li>
+          <li class="sanmap__ul-li">- общий анализ мочи</li>
+          <li class="sanmap__ul-li">- электрокардиографическое исследование (ЭКГ) </li>
+          <li class="sanmap__ul-li">- рентгенологическое исследование грудной клетки (флюорография)</li>
+        </ul>
+
+        <ul class="sanmap__ul" *ngIf="sanmap==='gastro'">
+          <li class="sanmap__ul-li">- общий анализ крови</li>
+          <li class="sanmap__ul-li">- общий анализ мочи</li>
+          <li class="sanmap__ul-li">- электрокардиографическое исследование (ЭКГ) </li>
+          <li class="sanmap__ul-li">- при заболеваниях органов пищеварения – их рентгеноскопическое исследование (если с
+            момента последнего рентгенологического обследования прошло более 6 месяцев), либо УЗИ, эндоскопия</li>
+        </ul>
+
+        <ul class="sanmap__ul" *ngIf="sanmap==='pulmonary'">
+          <li class="sanmap__ul-li">- общий анализ крови</li>
+          <li class="sanmap__ul-li">- общий анализ мочи</li>
+          <li class="sanmap__ul-li">- электрокардиографическое исследование (ЭКГ) </li>
+          <li class="sanmap__ul-li">- рентгенологическое исследование грудной клетки (флюорография);</li>
+        </ul>
+
+        <ul class="sanmap__ul" *ngIf="sanmap==='gynecology'">
+          <li class="sanmap__ul-li">- общий анализ крови</li>
+          <li class="sanmap__ul-li">- общий анализ мочи</li>
+          <li class="sanmap__ul-li">- электрокардиографическое исследование (ЭКГ) </li>
+          <li class="sanmap__ul-li">- рентгенологическое исследование грудной клетки (флюорография)</li>
+        </ul>
+
+        <ul class="sanmap__ul" *ngIf="sanmap==='kidney'">
+          <li class="sanmap__ul-li">- общий анализ крови</li>
+          <li class="sanmap__ul-li">- общий анализ мочи</li>
+          <li class="sanmap__ul-li">- электрокардиографическое исследование (ЭКГ) </li>
+          <li class="sanmap__ul-li">- рентгенологическое исследование грудной клетки (флюорография)</li>
+        </ul>
+      </div>
     </div>
 
-    <h3 class="sanmap__title">Профиль сан-курортного лечения:</h3>
-
-    <div class="sanmap__list">
-      <p class="sanmap__list-item" (click)="sanMapCardio()">кардиологический</p>
-      <p class="sanmap__list-item" (click)="sanMapGastro()">гастроэнтерологический</p>
-      <p class="sanmap__list-item" (click)="sanMapPulmonary()">пульмонологический</p>
-      <p class="sanmap__list-item" (click)="sanMapGynecology()">гинекологический</p>
-      <p class="sanmap__list-item" (click)="sanMapKidney()">болезни почек и мочеполовой системы</p>
-    </div>
-
-    <div class="sanmap__info">
-      <h4 class="sanmap__info-title">Список обследований, которые необходимо пройти:</h4>
-      <ul class="sanmap__ul" *ngIf="sanmap==='cardio'">
-        <li class="sanmap__ul-li">- общий анализ крови</li>
-        <li class="sanmap__ul-li">- общий анализ мочи</li>
-        <li class="sanmap__ul-li">- электрокардиографическое исследование (ЭКГ) </li>
-        <li class="sanmap__ul-li">- рентгенологическое исследование грудной клетки (флюорография)</li>
-      </ul>
-
-      <ul class="sanmap__ul" *ngIf="sanmap==='gastro'">
-        <li class="sanmap__ul-li">- общий анализ крови</li>
-        <li class="sanmap__ul-li">- общий анализ мочи</li>
-        <li class="sanmap__ul-li">- электрокардиографическое исследование (ЭКГ) </li>
-        <li class="sanmap__ul-li">- при заболеваниях органов пищеварения – их рентгеноскопическое исследование (если с момента последнего рентгенологического обследования прошло более 6 месяцев), либо УЗИ, эндоскопия</li>
-      </ul>
-
-      <ul class="sanmap__ul" *ngIf="sanmap==='pulmonary'">
-        <li class="sanmap__ul-li">- общий анализ крови</li>
-        <li class="sanmap__ul-li">- общий анализ мочи</li>
-        <li class="sanmap__ul-li">- электрокардиографическое исследование (ЭКГ) </li>
-        <li class="sanmap__ul-li">- рентгенологическое исследование грудной клетки (флюорография);</li>
-      </ul>
-
-      <ul class="sanmap__ul" *ngIf="sanmap==='gynecology'">
-        <li class="sanmap__ul-li">- общий анализ крови</li>
-        <li class="sanmap__ul-li">- общий анализ мочи</li>
-        <li class="sanmap__ul-li">- электрокардиографическое исследование (ЭКГ) </li>
-        <li class="sanmap__ul-li">- рентгенологическое исследование грудной клетки (флюорография)</li>
-      </ul>
-
-      <ul class="sanmap__ul" *ngIf="sanmap==='kidney'">
-        <li class="sanmap__ul-li">- общий анализ крови</li>
-        <li class="sanmap__ul-li">- общий анализ мочи</li>
-        <li class="sanmap__ul-li">- электрокардиографическое исследование (ЭКГ) </li>
-        <li class="sanmap__ul-li">- рентгенологическое исследование грудной клетки (флюорография)</li>
-      </ul>
-    </div>
 
   </div>
 </div>

@@ -36,8 +36,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import { OnlineAppointmentModule} from "./online-appointment/online-appointment.module";
 import {AppointmentDoctorComponent} from "./appointment-doctor/appointment-doctor.component";
-import { StoreModule } from '@ngrx/store';
-import { reducer } from '../reducers/reducers';
+import { MessengerComponent } from './messenger/messenger.component';
+import { MessengerDialogComponent } from './messenger-dialog/messenger-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -60,7 +61,9 @@ import { reducer } from '../reducers/reducers';
     NotificationsComponent,
     NotificationsTwoComponent,
     NotificationsOneComponent,
-    AppointmentDoctorComponent
+    AppointmentDoctorComponent,
+    MessengerComponent,
+    MessengerDialogComponent
   ],
   exports: [
     HeadComponent,
@@ -68,7 +71,6 @@ import { reducer } from '../reducers/reducers';
   ],
   imports: [
     CommonModule,
-    StoreModule.forRoot({ person: reducer }),
     PatientProfileRoutingModule,
     CalendarModule,
     AutoCompleteModule,
@@ -85,7 +87,9 @@ import { reducer } from '../reducers/reducers';
     FormsModule,
     ReactiveFormsModule,
     SelectButtonModule,
-    OnlineAppointmentModule
-  ]
+    OnlineAppointmentModule,
+
+  ],
+  providers:[]
 })
 export class PatientProfileModule { }

@@ -3,8 +3,7 @@ import {CommonModule} from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login.component';
-import { StoreModule } from '@ngrx/store';
-
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
 
 
 @NgModule({
@@ -12,11 +11,14 @@ import { StoreModule } from '@ngrx/store';
     CommonModule,
     BrowserModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ProgressSpinnerModule
+
     ],
   declarations: [
    LoginComponent
-  ]
+  ],
+  providers:[]
 })
 
 export class LoginModule { }

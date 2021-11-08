@@ -6,23 +6,23 @@
     font-weight: 700;
     font-size: 35px;
     line-height: 48px;
-    color: #696D94;
+    color: #696d94;
     width: 500px;
     height: 49px;
-    background: #9FE5E9;
+    background: #9fe5e9;
     border-radius: 10px;
     text-align: center;
     padding: 2px;
     margin-bottom: 40px;
 }
 
-// 
+//
 .worksheet__wrapper {
-    width: 900px;
-    background: #E3F6F7;
+    width: 70%;
+    background: #e3f6f7;
     border-radius: 10px;
     padding: 35px 52px;
-    margin-bottom: 28px;
+    margin: 0 auto 28px;
     & hr {
         width: 100%;
         height: 0px;
@@ -39,7 +39,7 @@
     margin-bottom: 14px;
 }
 
-// 
+//
 .worksheet__item {
     display: flex;
     align-items: center;
@@ -67,14 +67,14 @@
     font-size: 20px;
     line-height: 27px;
     text-decoration-line: underline;
-    color: #13757A !important;
+    color: #13757a !important;
 }
 
 .worksheet__item-status-blue {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: linear-gradient(0deg, #29E3EF, #29E3EF), #FF0303;
+    background: linear-gradient(0deg, #29e3ef, #29e3ef), #ff0303;
     border: 1px solid #000000;
     margin-right: 9px;
     display: inline-block;
@@ -101,24 +101,24 @@
     width: 250px;
     text-align: center;
     padding: 6px;
-    background: #FFFFFF;
-    border: 2px solid #3CB5BB;
+    background: #ffffff;
+    border: 2px solid #3cb5bb;
     border-radius: 10px;
     font-weight: 700;
     font-size: 20px;
     line-height: 27px;
-    color: #3CB5BB !important;
-    transition: all .5s;
+    color: #3cb5bb !important;
+    transition: all 0.5s;
     &:hover {
-        background: #3CB5BB;
-        color: #FFFFFF !important;
+        background: #3cb5bb;
+        color: #ffffff !important;
     }
 }
 
 .worksheet__link-agreement {
     width: 434px;
-    background: #FFFFFF;
-    border: 2px solid #3CB5BB;
+    background: #ffffff;
+    border: 2px solid #3cb5bb;
     border-radius: 10px;
     padding: 7px;
     text-align: center;
@@ -127,11 +127,11 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 27px;
-    transition: all .5s;
+    transition: all 0.5s;
     color: #383636 !important;
     &:hover {
-        background: #3CB5BB;
-        color: #FFFFFF !important;
+        background: #3cb5bb;
+        color: #ffffff !important;
     }
 }
 
@@ -145,15 +145,15 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 27px;
-    color: #817B7B;
+    color: #817b7b;
     margin-bottom: 50px;
 }
 
 .worksheet__comment-input {
     width: 100%;
     min-height: 53px;
-    background: #FFFFFF;
-    border: 2px solid #3CB5BB;
+    background: #ffffff;
+    border: 2px solid #3cb5bb;
     border-radius: 15px;
     padding: 9px 24px;
     font-weight: 400;
@@ -171,22 +171,22 @@
 
 .worksheet__comment-btn {
     width: 177px;
-    background: #FFFFFF;
-    border: 2px solid #3CB5BB;
+    background: #ffffff;
+    border: 2px solid #3cb5bb;
     border-radius: 15px;
     text-align: center;
     padding: 6px 15px;
     font-weight: 400;
     font-size: 24px;
     line-height: 33px;
-    color: #3CB5BB !important;
+    color: #3cb5bb !important;
 }
 .question__table-status-red {
     display: inline-block;
     width: 11px;
     height: 11px;
     border-radius: 50%;
-    background: linear-gradient(0deg, #FF0303, #FF0303), #FF0303;
+    background: linear-gradient(0deg, #ff0303, #ff0303), #ff0303;
     border: 1px solid #000000;
     margin-right: 7px;
-  }
+}

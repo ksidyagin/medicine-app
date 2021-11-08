@@ -15,7 +15,10 @@
                     <p class="form-error" *ngIf="registerForm.get('password').errors && registerForm.get('password').touched">
                         Пароль обязателен и должен содержать не менее 4 символов</p>
 
-                    <button type="submit" [disabled]="registerForm.invalid" class="sign__form-btn">Войти</button>
+                    <button type="submit" [disabled]="registerForm.invalid" class="sign__form-btn">Войти
+                        <p-progressSpinner *ngIf="isSpinner" [style]="{float:'right', width: '50px', height: '50px'}" styleClass="custom-spinner" strokeWidth="8" fill="#EEEEEE" animationDuration=".5s"></p-progressSpinner>
+                    </button>
+                    
                     <div class="sign__form-text">Если нет аккаунта,
                         <h3 class="sign__form-reg" (click)="goToRegistr()">Зарегистрируйтесь!</h3>
                     </div>
@@ -24,6 +27,7 @@
                     </p>
                 </form>
             </div>
+            
         </div>
     </div>
 </div>

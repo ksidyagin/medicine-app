@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Store } from '@ngxs/store';
 import jwtDecode from 'jwt-decode';
 import { Observable } from 'rxjs';
-import { AppState } from 'src/app/reducers/app.state';
-import { LoginUser, Person } from 'src/app/reducers/user-token.model';
+import { AuthenticationService } from 'src/app/shared/services/authentification/authentification.service';
+
 
 @Component({
   selector: 'app-account',
@@ -11,14 +11,19 @@ import { LoginUser, Person } from 'src/app/reducers/user-token.model';
   styleUrls: ['./account.component.scss']
 })
 export class AccountComponent implements OnInit {
-  patient: any =  jwtDecode(localStorage.getItem('user-token'));
-  persons: Observable<Person[]>;
-    constructor(private store: Store<AppState>) { 
-          this.persons = store.select('persons');
+  patient: any;
+    constructor(private changeDetection: ChangeDetectorRef, private auth: AuthenticationService) { 
+       
      }
 
   ngOnInit(): void {
-    console.log(this.persons)
+
+      this.auth.getUser().subscribe((data:any)=>{
+        this.patient = jwtDecode(data.token)
+        this.changeDetection.detectChanges();
+      })
+
   }
+
 
 }

@@ -1,5 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, LOCALE_ID, NgModule, NO_ERRORS_SCHEMA }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CUSTOM_ELEMENTS_SCHEMA, LOCALE_ID, NgModule, NO_ERRORS_SCHEMA }   from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -40,9 +39,8 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
 import { AuthenticationService } from './shared/services/authentification/authentification.service';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { JwtInterceptor } from './shared/interceptors/jwt.interceptor';
-import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
-import { reducer } from './reducers/reducers';
+import { BrowserModule } from '@angular/platform-browser';
+
 registerLocaleData(localeRu, 'ru');
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -78,8 +76,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AccordionModule,
     DataViewModule,
     SelectButtonModule,
-    AutoCompleteModule,
-    StoreModule.forRoot({ person: reducer })
+    AutoCompleteModule
   ],
   providers: [TranslateService, TranslateStore,
     AppService,
@@ -91,11 +88,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     AuthenticationService,
      JwtHelperService,
     { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: JwtInterceptor,
-      multi: true
-    },
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: JwtInterceptor,
+    //   multi: true
+    // },
     { provide: LOCALE_ID, useValue: 'ru' }
   ],
   exports:[
